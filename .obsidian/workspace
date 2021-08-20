@@ -1,0 +1,98 @@
+{
+  "main": {
+    "id": "479cd696eaa19421",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b1c2de7b6bf6a6f",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d26bb87314a8c901",
+    "type": "split",
+    "children": [
+      {
+        "id": "b4dfd558362ac8b8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55eb4b98ee7e8e84",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "90b34ef2badd2122",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5247455cb0de9c0a",
+    "type": "split",
+    "children": [
+      {
+        "id": "726dd0dbe291adf2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d30cf8b2ef904a6f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "3b1c2de7b6bf6a6f",
+  "lastOpenFiles": [
+    "算法/图.md",
+    "算法/算法.md",
+    "算法/回文串问题.md",
+    "算法/字符串转整数、整数翻转.md",
+    "算法/状态压缩 DP.md",
+    "算法/802.找到最终的安全状态.md",
+    "公式.md",
+    "算法/847. 访问所有节点的最短路径.md",
+    "算法/贪心.md",
+    "算法/?.旅行商问题.md"
+  ]
+}
