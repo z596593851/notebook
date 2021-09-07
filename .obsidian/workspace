@@ -7,8 +7,11 @@
         "id": "3b1c2de7b6bf6a6f",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "算法/贪心.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -36,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "盛水",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "算法/贪心.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +88,15 @@
   },
   "active": "3b1c2de7b6bf6a6f",
   "lastOpenFiles": [
-    "算法/图.md",
-    "算法/算法.md",
-    "算法/回文串问题.md",
-    "算法/字符串转整数、整数翻转.md",
-    "算法/状态压缩 DP.md",
-    "算法/802.找到最终的安全状态.md",
-    "公式.md",
-    "算法/847. 访问所有节点的最短路径.md",
     "算法/贪心.md",
-    "算法/?.旅行商问题.md"
+    "算法/双指针.md",
+    "算法/单调栈.md",
+    "算法/打家劫舍.md",
+    "算法/背包问题模版.md",
+    "算法/图.md",
+    "算法/状态压缩 DP.md",
+    "算法/KMP.md",
+    "算法/字符串转整数、整数翻转.md",
+    "算法/Rand7()生成Rand10().md"
   ]
 }
