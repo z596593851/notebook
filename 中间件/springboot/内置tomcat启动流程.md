@@ -4,7 +4,10 @@
 DispatcherServletRegistrationConfiguration将DispatcherServlet和DispatcherServletRegistrationBean注入容器。
 DispatcherServletRegistrationBean实现了ServletContextInitializer，并且把容器的DispatcherServlet包含进去。
 
-![[Pasted image 20210726182000.png]]
 
-![[Pasted image 20210726194222.png]]
-![[Pasted image 20210726194237.png]]
+包含关系：
+MyTomcatWebServer->Tomcat->MyTomcatEmbeddedContext->MyTomcatStarter
+->MyServletContextInitializer
+
+调用关系亦是如此。当 MyTomcatWebServer 调用 tomcat.start() 时，tomcat调用MyTomcatStarter 的 onStartup方法，此时遍历 initializers 并调用其 onStartup ，
+
