@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "算计网络/2.分层.md",
-            "mode": "preview"
+            "file": "中间件/MyBatis/未命名.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算计网络/2.分层.md",
+                "file": "中间件/MyBatis/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "3b1c2de7b6bf6a6f",
   "lastOpenFiles": [
+    "中间件/MyBatis/未命名.md",
+    "mysql/redolog, undolog, binlog.md",
+    "中间件/springboot/内置tomcat启动流程.md",
+    "中间件/springboot/注解解析核心.md",
+    "算法/TreeMap.md",
+    "算法/未命名.md",
     "算计网络/2.分层.md",
     "算计网络/1.指标.md",
     "计算机网络/流量控制，拥塞控制.md",
-    "算计网络/未命名.md",
-    "未命名.md",
-    "设计模式/13.行为型-策略模式.md",
-    "算法/前缀和.md",
-    "算法/560.和为K的子数组.md",
-    "算法/437.路经总和.md",
-    "mysql/慢查询分析及优化.md"
+    "算计网络/未命名.md"
   ]
 }
