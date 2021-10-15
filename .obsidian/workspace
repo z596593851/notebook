@@ -1,19 +1,15 @@
 {
   "main": {
-    "id": "479cd696eaa19421",
+    "id": "2fe1666c15f03eaa",
     "type": "split",
     "children": [
       {
-        "id": "3b1c2de7b6bf6a6f",
+        "id": "d604967d05a57a9c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "中间件/MyBatis/未命名.md",
-=======
-            "file": "算计网络/5.数据链路层.md",
->>>>>>> b040caf657684839d8be2f8fe43b629e09e3b338
+            "file": "中间件/MyBatis/6.生命周期.md",
             "mode": "source"
           }
         }
@@ -22,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d26bb87314a8c901",
+    "id": "6b3b0d115a43d76e",
     "type": "split",
     "children": [
       {
-        "id": "b4dfd558362ac8b8",
+        "id": "fcd87b28e2bf0dd0",
         "type": "tabs",
         "children": [
           {
-            "id": "55eb4b98ee7e8e84",
+            "id": "a1ca130382eaa811",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -38,12 +34,12 @@
             }
           },
           {
-            "id": "90b34ef2badd2122",
+            "id": "b364642dc1104b2d",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "盛水",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -59,24 +55,20 @@
     "width": 300
   },
   "right": {
-    "id": "5247455cb0de9c0a",
+    "id": "1a1080661f1bd454",
     "type": "split",
     "children": [
       {
-        "id": "726dd0dbe291adf2",
+        "id": "69eba92926326e65",
         "type": "tabs",
         "children": [
           {
-            "id": "d30cf8b2ef904a6f",
+            "id": "e2b405c54215beaa",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "中间件/MyBatis/未命名.md",
-=======
-                "file": "算计网络/5.数据链路层.md",
->>>>>>> b040caf657684839d8be2f8fe43b629e09e3b338
+                "file": "中间件/MyBatis/6.生命周期.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,30 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3b1c2de7b6bf6a6f",
+  "active": "d604967d05a57a9c",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "中间件/MyBatis/未命名.md",
-    "mysql/redolog, undolog, binlog.md",
-    "中间件/springboot/内置tomcat启动流程.md",
-    "中间件/springboot/注解解析核心.md",
-    "算法/TreeMap.md",
-    "算法/未命名.md",
-    "算计网络/2.分层.md",
-    "算计网络/1.指标.md",
+    "中间件/MyBatis/6.生命周期.md",
+    "中间件/MyBatis/1.缓存.md",
+    "设计模式/2.创建型-工厂模式.md",
+    "算法/贪心.md",
+    "算法/502.IPO.md",
+    "算法/300.最长递增子序列.md",
+    "算法/前缀和.md",
+    "算法/560.和为K的子数组.md",
     "计算机网络/流量控制，拥塞控制.md",
-    "算计网络/未命名.md"
-=======
-    "算计网络/5.数据链路层.md",
-    "算计网络/4.物理层.md",
-    "计算机网络/流量控制，拥塞控制.md",
-    "算计网络/数据链路层.md",
-    "算计网络/物理层.md",
-    "算计网络/Untitled.md",
-    "算计网络/2.OSI七层模型.md",
-    "算计网络/3.TCP IP五层模型.md",
-    "算计网络/2.OSI七层协议.md",
-    "算计网络/2.分层.md"
->>>>>>> b040caf657684839d8be2f8fe43b629e09e3b338
+    "计算机网络/王道/5.数据链路层.md"
   ]
 }
