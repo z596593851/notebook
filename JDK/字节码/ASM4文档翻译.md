@@ -1,0 +1,283 @@
+# 第二章：核心API
+
+# 2、Classes
+
+这章将阐述如何通过ASM API生成和改变一个已经编译好的java类。
+
+## 2.1 结构
+
+### 2.1.1 综述
+
+一个编译好的类包含以下组成部分：
+
+![[Pasted image 20211018201147.png]]
+
+### 2.1.2 内部名
+
+用来限定类或者接口的类型，在编译好的类中被表示成内部名，即类的权限定名，且将点替换成斜杠。例如 String 被表示为 java/lang/String。
+
+### 2.1.3 类型描述
+
+内部名只用来表示类或者接口的限定类型，而成员的限定类型表示为如下：
+
+![[Pasted image 20211018201208.png]]
+
+### 2.1.4 方法描述
+
+一个方法描述是一系列方法的参数和返回值的类型描述的集合。一个方法描述以左括号开始，紧跟着每个参数的类型描述，紧跟着一个右括号，紧跟着返回值的类型描述，如果方法没有返回值，则用V来表示void（方法描述不包含方法名和参数名）。
+
+![[Pasted image 20211018201220.png]]
+
+## 2.2 接口和组成
+
+### 2.2.1 
+
+ASM的生成和修改类的能力依赖于ClassVisitor类，这个类的每一个方法都和类文件的结构一一对应。一个简单的类被ClassVisitor的方法访问后返回void，而复杂的类的内容（如类的注解、成员、方法）被ClassVisitor的方法访问后，会返回一个新的vositor辅助类，如visitAnnotation()返回AnnotationVisitor，visitField返回FieldVisitor，visitMethod返回MethodVisitor。
+
+同样的规则也可以递归的适用于这些辅助类，例如FieldVisitor中的visitAnnotation()方法也可以返回AnnotationVisitor类，就像ClassVisitor一样：
+
+![[Pasted image 20211018201242.png]]
+
+![[Pasted image 20211018201252.png]]
+这些辅助类的创建和使用会在接下来的章节说明。本章只关注那些只用ClassVisitor就可以解决的简单问题。
+
+ClassVisitor中的方法必须以如下顺序调用：
+
+```
+visit
+[visitSource]
+[visitOuterClass] 
+(visitAnnotation | visitAttribute)*
+(visitInnerClass | visitField | visitMethod)* 
+visitEnd
+```
+
+visit 方法最先被调用，接着调用零次或一次 visitSource 方法，接着调用零次或一次 visitOuterClass 方法，再接下来按任意顺序调用任意多次 visitAnnotation 和 visitAttribute 方法，再接下来按任意顺序调用任意多次 visitInnerClass、visitField、visitMethod 方法，visitEnd 最后被调用。
+
+ASM提供了三个基于 ClassVisitor API 的核心组件来创建和修改类：
+
+- ClassReader 解析以byte数组形式给定的编译好的类，并且将ClassVisitor实例传入accept方法以调用ClassVisitor中相应的visitXXX方法。可以被视为一个事件生产者；
+- ClassWriter 是 ClassVisitor的一个实现类，toByteArray 方法把最终修改的字节码以 byte 数组的形式返回。可以被视为一个事件消费者。
+- ClassVisitor 在解析字节码的过程中遇到不同的节点时会调用不同的 visit() 方法，正是在这些 visit 的过程中，我们得以有机会去修改各个子节点的字节码。可以视为一个事件过滤器。
+
+### 2.2.2 解析类
+
+```java
+public class Person {
+    private String name;
+    private Integer age;
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+}
+```
+
+```java
+public class ClassPrinter extends ClassVisitor {
+    public ClassPrinter() {
+        super(ASM4);
+    }
+
+    @Override
+    public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
+        System.out.println(name+" extends "+superName+" {");
+    }
+
+    @Override
+    public FieldVisitor visitField(int access, String name, String desc, String signature, Object value) {
+        System.out.println(" " + desc + " " + name);
+        return null;
+    }
+
+    @Override
+    public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
+        System.out.println(" " + name + desc);
+        return null;
+    }
+
+    @Override
+    public void visitEnd() {
+        System.out.println("}");
+    }
+
+    public static void main(String[] args) throws IOException {
+        ClassPrinter cp = new ClassPrinter();
+        ClassReader cr = new ClassReader("com.hxm.Person");
+        cr.accept(cp, 0);
+    }
+}
+```
+
+输出：
+
+```
+com/hxm/Person extends java/lang/Object {
+ Ljava/lang/String; name
+ Ljava/lang/Integer; age
+ <init>()V
+ getName()Ljava/lang/String;
+ getAge()Ljava/lang/Integer;
+ setName(Ljava/lang/String;)V
+ setAge(Ljava/lang/Integer;)V
+}
+```
+
+### 2.2.3 生成类
+生成类只需要使用`ClassWriter`组件：
+```java
+public class ClassGenerate {
+    public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchFieldException {
+        ClassWriter cw = new ClassWriter(0);
+        cw.visit(V1_5, ACC_PUBLIC + ACC_ABSTRACT + ACC_INTERFACE,
+                "com/hxm/Comparable", null, "java/lang/Object",
+                new String[] { "com/hxm/Mesurable" });
+        cw.visitField(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "LESS", "I",
+                null, new Integer(-1)).visitEnd();
+        cw.visitField(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "EQUAL", "I",
+                null, new Integer(0)).visitEnd();
+        cw.visitField(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "GREATER", "I",
+                null, new Integer(1)).visitEnd();
+        cw.visitMethod(ACC_PUBLIC + ACC_ABSTRACT, "compareTo",
+                "(Ljava/lang/Object;)I", null, null).visitEnd();
+        cw.visitEnd();
+        byte[] b = cw.toByteArray();
+        Object o=new Object();
+        MyClassLoader classLoade=new MyClassLoader();
+        Class c=classLoade.defineClass("com.hxm.Comparable",b);
+        int i=(int)c.getField("EQUAL").get(o);
+        System.out.println(i);
+    }
+}
+
+public class MyClassLoader extends ClassLoader{  
+    public Class defineClass(String name, byte[] b) {  
+        return defineClass(name, b, 0, b.length);  
+ }  
+}
+```
+### 2.2.4 修改类
+之前我们都是单独的在使用`ClassReader`和`ClassWriter`，事件“手动”产生并直接被`ClassWriter`消费，或者由`ClassReader`产生被“手动”消费。接下来我们使用`ClassReader`生产事件并由`ClassWriter`消费，从而修改类。
+修改类的版本号：
+```java
+public class ChangeClass {
+    public static void main(String[] args) throws IOException {
+        ClassReader cr = new ClassReader("com.hxm.Person");
+        ClassWriter cw = new ClassWriter(cr, 0);
+        ChangeVersionAdapter ca = new ChangeVersionAdapter(cw);
+        cr.accept(ca, 0);
+        byte[] b2 = cw.toByteArray();
+    }
+}
+
+public class ChangeVersionAdapter extends ClassVisitor {  
+    public ChangeVersionAdapter(ClassVisitor cv) {  
+        super(ASM4, cv);  
+ }  
+    @Override  
+ public void visit(int version, int access, String name,  
+ String signature, String superName, String[] interfaces) {  
+        cv.visit(V1_5, access, name, signature, superName, interfaces);  
+ }  
+}
+```
+![[Pasted image 20211018210953.png]]
+![[Pasted image 20211018211010.png]]
+### 2.2.5 移除成员
+```java
+public class RemoveDebugAdapter  extends ClassVisitor {
+    private String mName;
+    private String mDesc;
+    public RemoveDebugAdapter(ClassVisitor cv, String mName, String mDesc) {
+        super(ASM4, cv);
+        this.mName=mName;
+        this.mDesc=mDesc;
+    }
+    @Override
+    public void visitSource(String source, String debug) {
+        //删除source
+    }
+    @Override
+    public void visitOuterClass(String owner, String name, String desc) {
+        //删除外部类
+    }
+    @Override
+    public void visitInnerClass(String name, String outerName, String innerName, int access) {
+        //删除内部类
+    }
+
+    @Override
+    public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
+        //删除成员方法
+        if (name.equals(mName) && desc.equals(mDesc)) {
+            return null;
+        }
+        return cv.visitMethod(access, name, desc, signature, exceptions);
+    }
+}
+```
+### 2.2.6 增加成员
+```java
+public class AddFieldAdapter extends ClassVisitor {
+    private int fAcc;
+    private String fName;
+    private String fDesc;
+    private boolean isFieldPresent;
+    
+    public AddFieldAdapter(ClassVisitor cv, int fAcc, String fName,
+                           String fDesc) {
+        super(ASM4, cv);
+        this.fAcc = fAcc;
+        this.fName = fName;
+        this.fDesc = fDesc;
+    }
+    
+    @Override
+    public FieldVisitor visitField(int access, String name, String desc,
+                                   String signature, Object value) {
+        if (name.equals(fName)) {
+            isFieldPresent = true;
+        }
+        return cv.visitField(access, name, desc, signature, value);
+    }
+    
+    @Override
+    public void visitEnd() {
+        if (!isFieldPresent) {
+            FieldVisitor fv = cv.visitField(fAcc, fName, fDesc, null, null);
+            if (fv != null) {
+                fv.visitEnd();
+            } }
+        cv.visitEnd();
+    } 
+}
+```
+事实上，唯一真正正确的解决方案是通过在 visitEnd 方法中进行额外调用来添加新成员。 事实上，一个类不能包含重复的成员，确保新成员唯一的唯一方法是将它与所有现有成员进行比较，这只能在访问完所有成员后才能完成，即在 visitEnd 方法中。
+或者，使用不太可能使用的名称，例如 _counter$ 或 _4B7F_ 就足够在实践中避免重复生成成员。
+## 2.3 工具
+### 2.3.1 Type
+正如您在前几节中看到的，ASM API 公开 Java 类型，因为它们存储在已编译的类中，即作为内部名称或类型描述符。可以在它们出现在源代码中时公开它们，以使代码更具可读性。但这需要在 ClassReader 和 ClassWriter 中的两种表示之间进行系统转换，这会降低性能。这就是 ASM 不透明地将内部名称和类型描述符转换为其等效源代码形式的原因。
+但是，它提供了 Type 类，以便在必要时手动执行此操作。
+
+
+Type 对象表示 Java 类型，可以从类型描述符或 Class 对象构造。 Type 类还包含表示基本类型的静态变量。例如 Type.INT_TYPE 是表示 int 类型的 Type 对象。
+
+getInternalName 方法返回类型的内部名称。例如 Type.getType(String.class).getInternalName() 给出 String 类的内部名称，即“java/lang/String”。此方法必须仅用于类或接口类型。
+
+getDescriptor 方法返回类型的描述符。因此，例如，不要使用“Ljava/lang/String;”在您的代码中，您可以使用 Type.getType(String.class).getDescriptor()。或者，而不是使用 I，
+你可以使用 Type.INT_TYPE.getDescriptor()。
+
+
+Type 对象也可以表示方法类型。这样的对象可以由方法描述符或方法对象构造。然后 getDescriptor 方法返回与此类型对应的方法描述符。此外，getArgumentTypes 和 getReturnType 方法可用于获取方法的参数类型和返回类型对应的 Type 对象。例如 Type.getArgumentTypes("(I)V") 返回一个包含单个元素 Type.INT_TYPE 的数组。类似地，对 Type.getReturnType("(I)V") 的调用将返回 Type.VOID_TYPE 对象。
