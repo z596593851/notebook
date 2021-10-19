@@ -268,16 +268,96 @@ public class AddFieldAdapter extends ClassVisitor {
 或者，使用不太可能使用的名称，例如 _counter$ 或 _4B7F_ 就足够在实践中避免重复生成成员。
 ## 2.3 工具
 ### 2.3.1 Type
-正如您在前几节中看到的，ASM API 公开 Java 类型，因为它们存储在已编译的类中，即作为内部名称或类型描述符。可以在它们出现在源代码中时公开它们，以使代码更具可读性。但这需要在 ClassReader 和 ClassWriter 中的两种表示之间进行系统转换，这会降低性能。这就是 ASM 不透明地将内部名称和类型描述符转换为其等效源代码形式的原因。
-但是，它提供了 Type 类，以便在必要时手动执行此操作。
-
+正如您在前几节中看到的，ASM API 暴露 Java 类型，因为它们存储在已编译的类中，即作为内部名称或类型描述符。可以在它们出现在源代码中时暴露它们，以使代码更具可读性。但这需要在 ClassReader 和 ClassWriter 中的两种表示之间进行系统转换，这会降低性能。这就是 ASM 不透明地将内部名称和类型描述符转换为其等效源代码形式的原因。但是，它提供了 Type 类，以便在必要时手动执行此操作。
 
 Type 对象表示 Java 类型，可以从类型描述符或 Class 对象构造。 Type 类还包含表示基本类型的静态变量。例如 Type.INT_TYPE 是表示 int 类型的 Type 对象。
 
 getInternalName 方法返回类型的内部名称。例如 Type.getType(String.class).getInternalName() 给出 String 类的内部名称，即“java/lang/String”。此方法必须仅用于类或接口类型。
 
-getDescriptor 方法返回类型的描述符。因此，例如，不要使用“Ljava/lang/String;”在您的代码中，您可以使用 Type.getType(String.class).getDescriptor()。或者，而不是使用 I，
-你可以使用 Type.INT_TYPE.getDescriptor()。
-
+getDescriptor 方法返回类型的描述符。例如，在您的代码中，您可以使用 Type.getType(String.class).getDescriptor()来代替 “Ljava/lang/String;”。使用Type.INT_TYPE.getDescriptor() 代替 I。
 
 Type 对象也可以表示方法类型。这样的对象可以由方法描述符或方法对象构造。然后 getDescriptor 方法返回与此类型对应的方法描述符。此外，getArgumentTypes 和 getReturnType 方法可用于获取方法的参数类型和返回类型对应的 Type 对象。例如 Type.getArgumentTypes("(I)V") 返回一个包含单个元素 Type.INT_TYPE 的数组。类似地，对 Type.getReturnType("(I)V") 的调用将返回 Type.VOID_TYPE 对象。
+### 2.3.2  TraceClassVisitor
+为了检查生成或转换的类是否符合您的预期，ClassWriter 返回的字节数组并没有真正的帮助，因为人类无法读取它。 文本表示会更容易使用。 这就是 TraceClassVisitor 类所提供的。 这个类，顾名思义，扩展了 ClassVisitor 类，并构建了被访问类的文本表示。 因此，您可以使用 TraceClassVisitor，而不是使用 ClassWriter 来生成您的类，以便获得实际生成内容的可读跟踪。 或者，更好的是，您可以同时使用两者。 实际上，除了默认行为之外，TraceClassVisitor 还可以将对其方法的所有调用委托给另一个访问者，例如 ClassWriter：
+```java
+public class ClassGenerateWithTrace {
+    public static void main(String[] args) {
+        ClassWriter cw = new ClassWriter(0);
+        PrintWriter printWriter=new PrintWriter(System.out);
+        TraceClassVisitor cv = new TraceClassVisitor(cw, printWriter);
+        cv.visit(V1_5, ACC_PUBLIC + ACC_ABSTRACT + ACC_INTERFACE,
+                "com/hxm/Comparable", null, "java/lang/Object",
+                new String[] { "com/hxm/Mesurable" });
+        cv.visitField(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "LESS", "I",
+                null, new Integer(-1)).visitEnd();
+        cv.visitField(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "EQUAL", "I",
+                null, new Integer(0)).visitEnd();
+        cv.visitField(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "GREATER", "I",
+                null, new Integer(1)).visitEnd();
+        cv.visitMethod(ACC_PUBLIC + ACC_ABSTRACT, "compareTo",
+                "(Ljava/lang/Object;)I", null, null).visitEnd();
+        cv.visitEnd();
+    }
+}
+
+```
+此代码创建了一个 TraceClassVisitor，它将它接收到的所有调用委托给 cw，并将这些调用的文本表示打印到 printWriter。 例如，在之前生成代码的示例中使用 TraceClassVisitor 将打印出：
+```java
+// class version 49.0 (49)
+// access flags 0x601
+public abstract interface com/hxm/Comparable implements com/hxm/Mesurable  {
+
+  // access flags 0x19
+  public final static I LESS = -1
+
+  // access flags 0x19
+  public final static I EQUAL = 0
+
+  // access flags 0x19
+  public final static I GREATER = 1
+
+  // access flags 0x401
+  public abstract compareTo(Ljava/lang/Object;)I
+}
+
+```
+请注意，您可以在生成或转换链中的任何点使用 TraceClassVisitor，而不仅仅是在 ClassWriter 之前，以便查看链中这一点发生的情况。 另请注意，通过 String.equals()，可以使用此适配器生成的类的文本表示轻松地比较类。
+### 2.3.3  CheckClassAdapter
+ClassWriter 类不检查它的方法是否以适当的顺序和有效的参数被调用。因此，有可能生成将被 Java 虚拟机验证程序拒绝的无效类。为了尽快检测其中一些错误，可以使用 CheckClassAdapter 类。与 TraceClassVisitor 一样，此类扩展了 ClassVisitor 类，并将对其方法的所有调用委托给另一个 ClassVisitor，例如 TraceClassVisitor 或 ClassWriter。然而，这个类不是打印被访问类的文本表示，而是在委托给下一个访问者之前检查它的方法是否以适当的顺序被调用，并带有有效的参数。如果出现错误，则会抛出 IllegalStateException 或 IllegalArgumentException。
+
+检查一个类的正确性，打印这个类的文本表示，最后创建一个字节数组表示：
+```java
+public class ClassGenerateWithCheck {
+    public static void main(String[] args) {
+        ClassWriter cw = new ClassWriter(0);
+        PrintWriter printWriter = new PrintWriter(System.out);
+        //先打印
+        TraceClassVisitor tcv = new TraceClassVisitor(cw, printWriter);
+        //后检查
+        CheckClassAdapter cv = new CheckClassAdapter(tcv);
+        cv.visit(V1_5, ACC_PUBLIC + ACC_ABSTRACT + ACC_INTERFACE,
+                "com/hxm/Comparable", null, "java/lang/Object",
+                new String[]{"com/hxm/Mesurable"});
+        cv.visitField(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "LESS", "I",
+                null, new Integer(-1)).visitEnd();
+        cv.visitField(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "EQUAL", "I",
+                null, new Integer(0)).visitEnd();
+        cv.visitField(ACC_PUBLIC + ACC_FINAL + ACC_STATIC, "GREATER", "I",
+                null, new Integer(1)).visitEnd();
+        cv.visitMethod(ACC_PUBLIC + ACC_ABSTRACT, "compareTo",
+                "(Ljava/lang/Object;)I", null, null).visitEnd();
+        cv.visitEnd();
+    }
+}
+```
+
+
+请注意，如果您以不同的顺序链接这些类访问者，则他们执行的操作也将以不同的顺序完成。例如，使用以下代码，检查将在跟踪之后进行：
+```java
+ClassWriter cw = new ClassWriter(0);  
+TraceClassVisitor tcv = new TraceClassVisitor(cw, printWriter); 
+CheckClassAdapter cv = new CheckClassAdapter(tcv);
+```
+
+与 TraceClassVisitor 一样，您可以在生成或转换链中的任何点使用 CheckClassAdapter，而不仅仅是在 ClassWriter 之前，以便在链中的这一点检查类。
+### 2.3.4 ASMifier
