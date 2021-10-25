@@ -88,6 +88,7 @@
   },
   "active": "d604967d05a57a9c",
   "lastOpenFiles": [
+    "JDK/字节码/ASM4文档翻译/3.Methods.md",
     "JDK/字节码/ASM4文档翻译/3..md",
     "JDK/字节码/ASM4文档翻译/2.Classes.md",
     "JDK/字节码/ASM4文档翻译/Untitled.md",
@@ -96,7 +97,6 @@
     "JDK/字节码/字节码.md",
     "中间件/MyBatis/6.生命周期.md",
     "中间件/MyBatis/3.插件（拦截器）.md",
-    "中间件/MyBatis/4.日志.md",
-    "中间件/MyBatis/5.反射类.md"
+    "中间件/MyBatis/4.日志.md"
   ]
 }
