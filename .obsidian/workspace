@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "JDK/字节码/ASM4文档翻译/5.实践.md",
+            "file": "JDK/字节码/ASM4文档翻译/2.Classes.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JDK/字节码/ASM4文档翻译/5.实践.md",
+                "file": "JDK/字节码/ASM4文档翻译/2.Classes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,18 +88,15 @@
   },
   "active": "d604967d05a57a9c",
   "lastOpenFiles": [
+    "JDK/字节码/ASM4文档翻译/2.Classes.md",
+    "JDK/字节码/ASM4文档翻译/3.Methods.md",
+    "JDK/字节码/ASM4文档翻译/4.Metadata.md",
+    "JDK/字节码/字节码.md",
+    "JDK/字节码/ASM4文档翻译/5.实践.md",
     "中间件/RabbitMQ/RabbitMQ.md",
     "算法/贪心.md",
     "算法/回溯.md",
-    "JDK/字节码/ASM4文档翻译/5.实践.md",
-    "JDK/字节码/ASM4文档翻译/4.Metadata.md",
-    "JDK/字节码/ASM4文档翻译/2.Classes.md",
-    "JDK/字节码/ASM4文档翻译/3.Methods.md",
     "JDK/字节码/ASM4文档翻译/3..md",
-    "JDK/字节码/ASM4文档翻译/ASM4文档翻译.md",
-    "JDK/字节码/ASM4文档翻译.md",
-    "JDK/字节码/字节码.md",
-    "中间件/MyBatis/6.生命周期.md",
-    "中间件/MyBatis/3.插件（拦截器）.md"
+    "JDK/字节码/ASM4文档翻译/ASM4文档翻译.md"
   ]
 }
