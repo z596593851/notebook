@@ -1,19 +1,15 @@
 {
   "main": {
-    "id": "2fe1666c15f03eaa",
+    "id": "1ca7908704315b1d",
     "type": "split",
     "children": [
       {
-        "id": "c69064ab6d88733d",
+        "id": "3ae166daeaba4ca0",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "JDK/字节码/ASM4文档翻译/3.Methods.md",
-=======
-            "file": "JDK/图灵1、并发基础.md",
->>>>>>> refs/remotes/origin/master
+            "file": "JDK/大纲.md",
             "mode": "source"
           }
         }
@@ -22,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "6b3b0d115a43d76e",
+    "id": "63fff7cf44d48fce",
     "type": "split",
     "children": [
       {
-        "id": "fcd87b28e2bf0dd0",
+        "id": "83fe301864969d3d",
         "type": "tabs",
         "children": [
           {
-            "id": "a1ca130382eaa811",
+            "id": "88236be0b3cbf2d5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -38,16 +34,12 @@
             }
           },
           {
-            "id": "b364642dc1104b2d",
+            "id": "c19b523e329adfb8",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-<<<<<<< HEAD
-                "query": "docker",
-=======
-                "query": "深拷贝",
->>>>>>> refs/remotes/origin/master
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -60,27 +52,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265
+    "width": 300
   },
   "right": {
-    "id": "1a1080661f1bd454",
+    "id": "a3cecb32158a487b",
     "type": "split",
     "children": [
       {
-        "id": "69eba92926326e65",
+        "id": "47a5607d50028d5f",
         "type": "tabs",
         "children": [
           {
-            "id": "e2b405c54215beaa",
+            "id": "c3c861856999e061",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "JDK/字节码/ASM4文档翻译/3.Methods.md",
-=======
-                "file": "JDK/图灵1、并发基础.md",
->>>>>>> refs/remotes/origin/master
+                "file": "JDK/大纲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,30 +86,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c69064ab6d88733d",
+  "active": "3ae166daeaba4ca0",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "JDK/字节码/ASM4文档翻译/3.Methods.md",
-    "JDK/字节码/ASM4文档翻译/2.Classes.md",
-    "工作/oppcluelib梳理.md",
-    "分布式/未命名.md",
-    "公式.md",
-    "knowledge.md",
-    "redis/缓存穿透，雪崩，击穿，一致性，分布式锁.md",
-    "redis/持久化，集群.md",
-    "redis/redis.md",
-    "JDK/字节码/ASM4文档翻译/4.Metadata.md"
-=======
-    "JDK/图灵1、并发基础.md",
-    "200. 岛屿数量.md",
-    "算法/7.整数反转.md",
-    "算法/回溯.md",
-    "113.路径总和 II.md",
-    "算法/TreeMap.md",
-    "算法/Trie树.md",
-    "算法/双指针.md",
-    "算法/回文串问题.md",
-    "算法/前缀和.md"
->>>>>>> refs/remotes/origin/master
+    "JDK/大纲.md",
+    "JDK/图灵1、并发基础.md"
   ]
 }
