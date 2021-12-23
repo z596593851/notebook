@@ -479,7 +479,7 @@ tryAcquireShared()尝试加锁失败，调用doAcquireShared()加入阻塞队列
 ![[Pasted image 20210727193028.png]]
 
 # 六、condition源码
-调用await()的线程1会先释放锁，进而被放入condition队列中：
+调用await()的线程1会先释放锁，进而被放入condition队列中，然后阻塞自己：
 ```java
 public final void await() throws InterruptedException {
 	if (Thread.interrupted())
@@ -489,6 +489,7 @@ public final void await() throws InterruptedException {
 	//释放当前线程占有的锁
 	int savedState = fullyRelease(node);
 	int interruptMode = 0;
+	//condition节点会进入循环
 	while (!isOnSyncQueue(node)) {
 		//释放完毕后，遍历AQS的队列，看当前节点是否在队列中，不在则阻塞自己
 		LockSupport.park(this);
