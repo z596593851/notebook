@@ -1,21 +1,16 @@
 {
   "main": {
-    "id": "1ca7908704315b1d",
+    "id": "008fd63d22acd785",
     "type": "split",
     "children": [
       {
-        "id": "3ae166daeaba4ca0",
+        "id": "962ca210c534b389",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "JDK/字节码/ASM4文档翻译/5.实践.md",
-            "mode": "preview"
-=======
-            "file": "JDK/大纲.md",
+            "file": "JDK/图灵2、线程基础.md",
             "mode": "source"
->>>>>>> f2cbbcd9f3c02343438faadeffe8975739f0e641
           }
         }
       }
@@ -23,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "63fff7cf44d48fce",
+    "id": "bf29539e8188eca8",
     "type": "split",
     "children": [
       {
-        "id": "83fe301864969d3d",
+        "id": "6dce70a4bdd00a47",
         "type": "tabs",
         "children": [
           {
-            "id": "88236be0b3cbf2d5",
+            "id": "3b23639d4360530e",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +34,7 @@
             }
           },
           {
-            "id": "c19b523e329adfb8",
+            "id": "a678c005623c4e89",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -60,24 +55,20 @@
     "width": 300
   },
   "right": {
-    "id": "a3cecb32158a487b",
+    "id": "56c7411559fa6c8f",
     "type": "split",
     "children": [
       {
-        "id": "47a5607d50028d5f",
+        "id": "2d64861cfe66cb01",
         "type": "tabs",
         "children": [
           {
-            "id": "c3c861856999e061",
+            "id": "20c4dd1f079f8005",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "JDK/字节码/ASM4文档翻译/5.实践.md",
-=======
-                "file": "JDK/大纲.md",
->>>>>>> f2cbbcd9f3c02343438faadeffe8975739f0e641
+                "file": "JDK/图灵2、线程基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,21 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3ae166daeaba4ca0",
+  "active": "962ca210c534b389",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "JDK/字节码/ASM4文档翻译/5.实践.md",
-    "JDK/字节码/ASM4文档翻译/4.Metadata.md",
-    "JDK/字节码/ASM4文档翻译/3.Methods.md",
-    "JDK/字节码/ASM4文档翻译/2.Classes.md",
-    "算法/437.路经总和.md",
+    "JDK/图灵2、线程基础.md",
+    "JDK/多线程.md",
+    "JDK/JUC/1.线程基础.md",
+    "JDK/JUC/2.集合的线程安全性.md",
+    "JDK/图灵1、并发基础.md",
+    "工作/oppcluelib梳理.md",
+    "算法/1893.检查是否区域内所有整数都被覆盖.md",
     "算法/前缀和.md",
-    "算法/位运算.md",
-    "算法/双指针.md",
-    "算法/回溯.md",
-=======
-    "JDK/大纲.md",
->>>>>>> f2cbbcd9f3c02343438faadeffe8975739f0e641
-    "JDK/图灵1、并发基础.md"
+    "1588.所有奇数长度子数组的和.md",
+    "算法/560.和为K的子数组.md"
   ]
 }
