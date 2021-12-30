@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Rust/语法.md",
-            "mode": "source"
+            "file": "JDK/图灵3、cas.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/语法.md",
+                "file": "JDK/图灵3、cas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "3ae166daeaba4ca0",
   "lastOpenFiles": [
+    "JDK/图灵3、cas.md",
+    "JDK/图灵2、线程基础.md",
     "Rust/语法.md",
     "JDK/大纲.md",
     "JDK/图灵1、并发基础.md"
