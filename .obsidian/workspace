@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "JDK/图灵4、sychronized.md",
+            "file": "算法/?.旅行商问题.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 215
   },
   "right": {
     "id": "56c7411559fa6c8f",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JDK/图灵4、sychronized.md",
+                "file": "算法/?.旅行商问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "962ca210c534b389",
   "lastOpenFiles": [
-    "JDK/图灵4、sychronized.md",
-    "算法/滑动窗口.md",
-    "算法/股票买卖-dp状态机.md",
-    "算法/309.最佳买卖股票时机含冷冻.md",
-    "算法/309.最佳买卖股票时机含冷冻1.md",
-    "算法/123.买卖股票的最佳时机III.md",
-    "算法/动态规划.md",
+    "算法/?.旅行商问题.md",
+    "算法/状态压缩 DP.md",
+    "算法/847. 访问所有节点的最短路径.md",
+    "算法/526. 优美的排列.md",
+    "算法/Trie树.md",
+    "算法/位运算.md",
     "算法/前缀和.md",
-    "算法/KMP.md",
-    "JDK/volatile.md"
+    "算法/回溯.md",
+    "算法/动态规划.md",
+    "算法/股票买卖-dp状态机.md"
   ]
 }
