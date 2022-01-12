@@ -1,15 +1,15 @@
 {
   "main": {
-    "id": "1ca7908704315b1d",
+    "id": "c4795691fd99a702",
     "type": "split",
     "children": [
       {
-        "id": "3ae166daeaba4ca0",
+        "id": "16238034632a7689",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "算法/?.旅行商问题.md",
+            "file": "JDK/图灵4、sychronized.md",
             "mode": "source"
           }
         }
@@ -18,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "63fff7cf44d48fce",
+    "id": "d479228e3aa7e764",
     "type": "split",
     "children": [
       {
-        "id": "83fe301864969d3d",
+        "id": "ac207ea7d58554b6",
         "type": "tabs",
         "children": [
           {
-            "id": "88236be0b3cbf2d5",
+            "id": "8279f4b72f5779a6",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -34,7 +34,7 @@
             }
           },
           {
-            "id": "c19b523e329adfb8",
+            "id": "75e5ab1f0ac5462a",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -55,20 +55,20 @@
     "width": 215
   },
   "right": {
-    "id": "a3cecb32158a487b",
+    "id": "99353a90005ae58a",
     "type": "split",
     "children": [
       {
-        "id": "47a5607d50028d5f",
+        "id": "8095eece21334af5",
         "type": "tabs",
         "children": [
           {
-            "id": "c3c861856999e061",
+            "id": "00f952f1eb222369",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/?.旅行商问题.md",
+                "file": "JDK/图灵4、sychronized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,26 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3ae166daeaba4ca0",
+  "active": "16238034632a7689",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "算法/?.旅行商问题.md",
-    "算法/状态压缩 DP.md",
-    "算法/847. 访问所有节点的最短路径.md",
-    "算法/526. 优美的排列.md",
-    "算法/Trie树.md",
-    "算法/位运算.md",
-    "算法/前缀和.md",
-    "算法/回溯.md",
-    "算法/动态规划.md",
-    "算法/股票买卖-dp状态机.md"
-=======
     "JDK/图灵4、sychronized.md",
-    "Rust/语法.md",
-    "JDK/图灵3、cas.md",
-    "JDK/图灵1、并发基础.md",
-    "JDK/图灵2、线程基础.md",
-    "JDK/大纲.md"
->>>>>>> b69ab9e4bd917e1ea660c026f9d3f35d001b19ac
+    "算法/424.替换后的最长重复字符.md",
+    "算法/滑动窗口.md",
+    "算法/3.无重复字符的最长字串.md",
+    "算法/回溯.md",
+    "算法/哈希.md",
+    "算法/等差数列划分.md",
+    "算法/图.md",
+    "算法/回文串问题.md",
+    "算法/847. 访问所有节点的最短路径.md"
   ]
 }
