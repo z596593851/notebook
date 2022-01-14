@@ -1,6 +1,6 @@
 # 一、AQS的数据结构
 
-AQS是一个双向循环链表
+AQS是一个双向链表
 
 ```java
 //表头
@@ -37,12 +37,13 @@ static final class Node {
 }
 ```
 其中waitStatus的状态有：
+- 0：初始化状态，表示节点在同步队列中等待获取锁
 
-1. CANCELLED=1：表示线程因为中断或者等待超时，需要从等待队列中取消等待；
+- CANCELLED=1：表示线程因为中断或者等待超时，需要从等待队列中取消等待；
 
-2. SIGNAL=-1：当前线程thread1占有锁，队列中的head(仅仅代表头结点，里面没有存放线程引用)的后继结点node1处于等待状态，如果已占有锁的线程thread1释放锁或被CANCEL之后就会通知这个结点node1去获取锁执行。
+- SIGNAL=-1：当前线程thread1占有锁，队列中的head(仅仅代表头结点，里面没有存放线程引用)的后继结点node1处于等待状态，如果已占有锁的线程thread1释放锁或被CANCEL之后就会通知这个结点node1去获取锁执行。
 
-3. CONDITION=-2：表示结点在等待队列中(这里指的是等待在某个lock的condition上，关于Condition的原理下面会写到)，当持有锁的线程调用了Condition的signal()方法之后，结点会从该condition的等待队列转移到该lock的同步队列上，去竞争lock。(注意：这里的同步队列就是我们说的AQS维护的FIFO队列，等待队列则是每个condition关联的队列)
+ - CONDITION=-2：表示结点在等待队列中(这里指的是等待在某个lock的condition上，关于Condition的原理下面会写到)，当持有锁的线程调用了Condition的signal()方法之后，结点会从该condition的等待队列转移到该lock的同步队列上，去竞争lock。(注意：这里的同步队列就是我们说的AQS维护的FIFO队列，等待队列则是每个condition关联的队列)
 
 4. PROPAGTE=-3：表示下一次共享状态获取将会传递给后继结点获取这个共享同步状态。
 

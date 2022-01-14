@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "JDK/图灵4、sychronized.md",
+            "file": "算法/139. 单词拆分.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 215
+    "width": 256
   },
   "right": {
     "id": "99353a90005ae58a",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JDK/图灵4、sychronized.md",
+                "file": "算法/139. 单词拆分.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "16238034632a7689",
   "lastOpenFiles": [
-    "JDK/图灵4、sychronized.md",
-    "算法/424.替换后的最长重复字符.md",
-    "算法/滑动窗口.md",
-    "算法/3.无重复字符的最长字串.md",
-    "算法/回溯.md",
-    "算法/哈希.md",
+    "算法/139. 单词拆分.md",
+    "算法/背包问题模版.md",
+    "算法/879.盈利计划.md",
+    "算法/01背包.md",
+    "算法/494. 目标和.md",
+    "算法/416. 分割等和子集.md",
+    "算法/单调栈.md",
     "算法/等差数列划分.md",
     "算法/图.md",
-    "算法/回文串问题.md",
-    "算法/847. 访问所有节点的最短路径.md"
+    "算法/滑动窗口.md"
   ]
 }
