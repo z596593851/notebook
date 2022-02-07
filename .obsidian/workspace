@@ -7,8 +7,11 @@
         "id": "3ae166daeaba4ca0",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "图灵/jvm/4、垃圾收集.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "图灵/jvm/4、垃圾收集.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,6 +88,8 @@
   },
   "active": "3ae166daeaba4ca0",
   "lastOpenFiles": [
+    "图灵/jvm/4、垃圾收集.md",
+    "图灵/jvm/3.md",
     "JDK/图灵4、sychronized.md",
     "JDK/图灵3、cas.md",
     "Rust/语法.md",
