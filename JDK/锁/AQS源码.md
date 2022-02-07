@@ -1,6 +1,6 @@
 # 一、AQS的数据结构
 
-AQS是一个双向循环链表
+AQS是一个双向链表
 
 ```java
 //表头
@@ -37,12 +37,13 @@ static final class Node {
 }
 ```
 其中waitStatus的状态有：
+- 0：初始化状态，表示节点在同步队列中等待获取锁
 
-1. CANCELLED=1：表示线程因为中断或者等待超时，需要从等待队列中取消等待；
+- CANCELLED=1：表示线程因为中断或者等待超时，需要从等待队列中取消等待；
 
-2. SIGNAL=-1：当前线程thread1占有锁，队列中的head(仅仅代表头结点，里面没有存放线程引用)的后继结点node1处于等待状态，如果已占有锁的线程thread1释放锁或被CANCEL之后就会通知这个结点node1去获取锁执行。
+- SIGNAL=-1：当前线程thread1占有锁，队列中的head(仅仅代表头结点，里面没有存放线程引用)的后继结点node1处于等待状态，如果已占有锁的线程thread1释放锁或被CANCEL之后就会通知这个结点node1去获取锁执行。
 
-3. CONDITION=-2：表示结点在等待队列中(这里指的是等待在某个lock的condition上，关于Condition的原理下面会写到)，当持有锁的线程调用了Condition的signal()方法之后，结点会从该condition的等待队列转移到该lock的同步队列上，去竞争lock。(注意：这里的同步队列就是我们说的AQS维护的FIFO队列，等待队列则是每个condition关联的队列)
+ - CONDITION=-2：表示结点在等待队列中(这里指的是等待在某个lock的condition上，关于Condition的原理下面会写到)，当持有锁的线程调用了Condition的signal()方法之后，结点会从该condition的等待队列转移到该lock的同步队列上，去竞争lock。(注意：这里的同步队列就是我们说的AQS维护的FIFO队列，等待队列则是每个condition关联的队列)
 
 4. PROPAGTE=-3：表示下一次共享状态获取将会传递给后继结点获取这个共享同步状态。
 
@@ -380,103 +381,7 @@ hasQueuedPredecessors()就是判断锁是否公平的关键，公平锁在加锁
 
 而非公平锁在加锁时，如果此时AQS队列的头节点正好释放锁，在唤醒下一个节点去获取锁时，两者就会产生加锁竞争。
 
-# 五、读写锁
 
-### 读锁的获取与释放
-
-![](https://oscimg.oschina.net/oscnet/2af06cd6459218c5b771ce5fd477a014f87.jpg)
-
--   tryAcquireShared()尝试获取资源，成功则直接返回；
--   失败则通过doAcquireShared()进入等待队列park()，直到被unpark()/interrupt()并成功获取到资源才返回。整个等待过程也是忽略中断的。
-
-```java
-    public void lock() {
-        sync.acquireShared(1);
-    }
-
-    public final void acquireShared(int arg) {
-        if (tryAcquireShared(arg) < 0)
-            doAcquireShared(arg);
-    }
-
-    protected final int tryAcquireShared(int unused) {
-
-        Thread current = Thread.currentThread();
-        int c = getState();
-
-        //获取写锁，写锁存在且不是当前线程
-        if (exclusiveCount(c) != 0 &&
-            getExclusiveOwnerThread() != current)
-            return -1;
-        //获取读锁
-        int r = sharedCount(c);
-        //读锁是否该阻塞，对于非公平模式下写锁获取优先级会高，如果存在要获取写锁的线程则读锁需要让步，公平模式下则先来先到
-        if (!readerShouldBlock() &&
-            r < MAX_COUNT && //MAX_COUNT为获取读锁的最大数量，为16位的最大值
-            compareAndSetState(c, c + SHARED_UNIT)) {
-            if (r == 0) {
-				//firstReader是把读锁状态从0变成1的那个线程
-                firstReader = current;
-                firstReaderHoldCount = 1;
-            } else if (firstReader == current) {
-                firstReaderHoldCount++;
-            } else {
-				//从ThreadLocal中获取当前线程重入读锁的次数，然后自增
-                HoldCounter rh = cachedHoldCounter;
-                if (rh == null || rh.tid != getThreadId(current))
-                    cachedHoldCounter = rh = readHolds.get();
-                else if (rh.count == 0)
-                    readHolds.set(rh);
-                rh.count++;
-            }
-            return 1;
-        }
-        return fullTryAcquireShared(current);
-    }
-
-
-    private void doAcquireShared(int arg) {
-        final Node node = addWaiter(Node.SHARED);
-        boolean failed = true;
-        try {
-            boolean interrupted = false;
-            for (;;) {
-                final Node p = node.predecessor();
-                if (p == head) {
-                    int r = tryAcquireShared(arg);
-                    if (r >= 0) {
-                        //将该节点放在队列头。如果有资源，继续释放队列头节点后面的节点
-                        setHeadAndPropagate(node, r);
-                        p.next = null; // help GC
-                        if (interrupted)
-                            selfInterrupt();
-                        failed = false;
-                        return;
-                    }
-                }
-                if (shouldParkAfterFailedAcquire(p, node) &&
-                    parkAndCheckInterrupt())
-                    interrupted = true;
-            }
-        } finally {
-            if (failed)
-                cancelAcquire(node);
-        }
-    }
-```
-
-tryAcquireShared()流程：
-
-1.  通过同步状态低16位判断，如果存在写锁且当前线程不是获取写锁的线程，返回-1，获取读锁失败；否则执行步骤2）。
-2.  通过readerShouldBlock判断当前线程是否应该被阻塞，如果不应该阻塞则尝试CAS同步状态；否则执行3）。
-3.  第一次获取读锁失败，通过fullTryAcquireShared再次尝试获取读锁。
-
-doAcquireShared()：
-
-tryAcquireShared()尝试加锁失败，调用doAcquireShared()加入阻塞队列之前，还会尝试一次加锁，加锁成功且资源有剩余的话还会唤醒之后的队友。那么问题就来了，假如老大用完后释放了5个资源，而老二需要6个，老三需要1个，老四需要2个。老大先唤醒老二，老二一看资源不够，他是把资源让给老三呢，还是不让？答案是否定的！老二会继续park()等待其他线程释放资源，也更不会去唤醒老三和老四了。独占模式，同一时刻只有一个线程去执行，这样做未尝不可；但共享模式下，多个线程是可以同时执行的，现在因为老二的资源需求量大，而把后面量小的老三和老四也都卡住了。当然，这并不是问题，只是AQS保证严格按照入队顺序唤醒罢了（保证公平，但降低了并发）
-
-锁降级：写锁降级为读锁，而读锁不能升级为写锁
-![[Pasted image 20210727193028.png]]
 
 # 六、condition源码
 调用await()的线程1会先释放锁，进而被放入condition队列中，然后阻塞自己：
@@ -542,5 +447,5 @@ final boolean transferForSignal(Node node) {
         LockSupport.unpark(node.thread);
     return true;
 }
-        
 ```
+

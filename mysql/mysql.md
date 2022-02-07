@@ -7,4 +7,4 @@
 [[主从复制]]
 [[MyISAM, InnoDB#表锁]]
 [[redolog, undolog, binlog]]
-[[MYSQL单表数据达2000万性能严重下降，为什么]]
+[[Mysql能存储多少数据量]]

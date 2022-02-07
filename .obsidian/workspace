@@ -7,11 +7,8 @@
         "id": "3ae166daeaba4ca0",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "JDK/图灵4、sychronized.md",
-            "mode": "preview"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JDK/图灵4、sychronized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
