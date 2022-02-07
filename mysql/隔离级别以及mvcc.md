@@ -34,7 +34,9 @@ MVCC其实是通过undo log来实现的：每行记录的后面保存了两个�
 * update：
 
     InnoDB插入一条新记录，保存当前系统版本号作为数据行版本号，同时保存当前系统版本号到原来的行作为删除版本号。
-
+	
+# 快照读和当前读
+select是快照读，对于会对数据修改的操作(update、insert、delete)都是采用当前读的模式。在执行这几个操作时会读取最新的记录，即使是别的事务提交的数据也可以查询到。例如如下的例子：
 
 | Id   | name   | DB_TRX_ID(数据行的版本号) | DB_ROLL_PT(删除版本号) |
 | ---- | ------ | ------------------------- | ---------------------- |
@@ -46,18 +48,28 @@ MVCC其实是通过undo log来实现的：每行记录的后面保存了两个�
 | 3    | yunzhi | 4                         | null                   |
 
 
+```shell
+//事务1
+insert into user values(NULL,'lisi');
+insert into user values(NULL,'yunzhi');
+```
 
-1：insert into user values(NULL,'lisi');
+```shell
+//事务4
+update user set name='yunzhi'; # 更新所有数据
+```
 
-​	insert into user values(NULL,'yunzhi');
+```shell
+//事务5
+insert into user values(NULL,'wangwu');
+```
 
-4：select * from user; 
-
-​	update user set name='yunzhi'; # 更新所有数据
-
-​	select * from user;
-
-5：insert into user values(NULL,'wangwu');
+```shell
+//事务4
+update user set name='yunzhi'; # 更新所有数据
+select * from
+```
+事务4在第二次update后再select，会读到事务5插入的数据，就是因为在update时更新了事务5提交的最新的数据。
 
 MySQL可重复读的隔离级别中并不是完全解决了幻读的问题，而是解决了读数据情况下的幻读问题。而对于修改的操作依旧存在幻读问题，就是说MVCC对于幻读的解决是不彻底的。
 
