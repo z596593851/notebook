@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/jvm/4、垃圾收集器.md",
-            "mode": "source"
+            "file": "图灵/mysql/5、优化案例2.md",
+            "mode": "preview"
           }
         }
       }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246
+    "width": 308
   },
   "right": {
     "id": "99353a90005ae58a",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/jvm/4、垃圾收集器.md",
+                "file": "图灵/mysql/5、优化案例2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "eef37bf79c57d6fa",
   "lastOpenFiles": [
+    "图灵/mysql/5、优化案例2.md",
+    "图灵/mysql/8.md",
+    "mysql/数据库范式.md",
+    "图灵/mysql/7、MVCC.md",
+    "图灵/mysql/6、锁.md",
     "图灵/jvm/4、垃圾收集器.md",
     "图灵/jvm/3.md",
     "算法/图.md",
     "算法/802.找到最终的安全状态.md",
-    "算法/?.旅行商问题.md",
-    "算法/动态规划.md",
-    "算法/贪心.md",
-    "算法/双指针.md",
-    "图灵/jvm/2、JVM内存模型.md",
-    "图灵/jvm/1、类加载.md"
+    "算法/?.旅行商问题.md"
   ]
 }
