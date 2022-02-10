@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "eef37bf79c57d6fa",
+        "id": "d0841d9230d10a4b",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "redis/redis中的数据结构.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -36,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "缓存雪崩",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308
+    "width": 224
   },
   "right": {
     "id": "99353a90005ae58a",
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "redis/redis中的数据结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "eef37bf79c57d6fa",
+  "active": "d0841d9230d10a4b",
   "lastOpenFiles": [
-    "图灵/mysql/5、优化案例2.md",
-    "图灵/mysql/8.md",
-    "mysql/数据库范式.md",
-    "图灵/mysql/7、MVCC.md",
-    "图灵/mysql/6、锁.md",
-    "图灵/jvm/4、垃圾收集器.md",
-    "图灵/jvm/3.md",
-    "算法/图.md",
-    "算法/802.找到最终的安全状态.md",
-    "算法/?.旅行商问题.md"
+    "redis/redis中的数据结构.md",
+    "redis/缓存穿透，雪崩，击穿，一致性，分布式锁.md",
+    "redis/redis.md",
+    "redis/持久化，集群.md",
+    "图灵/并发/图灵4、sychronized.md",
+    "图灵/并发/图灵5、AQS.md",
+    "图灵/并发/图灵8、多线程设计模式.md",
+    "图灵/并发/图灵7、ForkJoin.md",
+    "图灵/并发/图灵6、阻塞队列.md",
+    "图灵/并发/图灵3、cas.md"
   ]
 }
