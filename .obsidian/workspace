@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/jvm/常量池.md",
-            "mode": "preview"
+            "file": "图灵/spring/1.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/jvm/常量池.md",
+                "file": "图灵/spring/1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "3ae166daeaba4ca0",
   "lastOpenFiles": [
+    "图灵/spring/1.md",
+    "图灵/spring/2.md",
     "图灵/jvm/常量池.md",
     "图灵/jvm/2、JVM内存模型.md",
     "图灵/jvm/1、类加载.md",
@@ -95,8 +97,6 @@
     "图灵/mysql/7、MVCC.md",
     "图灵/mysql/6、锁.md",
     "图灵/mysql/8.md",
-    "图灵/mysql/4、优化案例.md",
-    "图灵/mysql/11.md",
-    "图灵/mysql/10.md"
+    "图灵/mysql/4、优化案例.md"
   ]
 }
