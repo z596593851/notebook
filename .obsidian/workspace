@@ -9,8 +9,13 @@
         "state": {
           "type": "markdown",
           "state": {
+<<<<<<< HEAD
             "file": "中间件/springboot/注解解析核心.md",
             "mode": "preview"
+=======
+            "file": "图灵/spring/2.md",
+            "mode": "source"
+>>>>>>> 512e2b7a6507bd586b8d3d26b9c85cf6f0e9ef79
           }
         }
       }
@@ -68,7 +73,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "中间件/springboot/注解解析核心.md",
+=======
+                "file": "图灵/spring/2.md",
+>>>>>>> 512e2b7a6507bd586b8d3d26b9c85cf6f0e9ef79
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +97,7 @@
   },
   "active": "d0841d9230d10a4b",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "中间件/springboot/注解解析核心.md",
     "图灵/spring/2.md",
     "图灵/spring/1.md",
@@ -98,5 +108,17 @@
     "算法/题库/1893.检查是否区域内所有整数都被覆盖.md",
     "分布式/分布式.md",
     "分布式/未命名.md"
+=======
+    "图灵/spring/2.md",
+    "图灵/spring/1.md",
+    "图灵/jvm/常量池.md",
+    "图灵/jvm/2、JVM内存模型.md",
+    "图灵/jvm/1、类加载.md",
+    "图灵/jvm/3.md",
+    "图灵/mysql/7、MVCC.md",
+    "图灵/mysql/6、锁.md",
+    "图灵/mysql/8.md",
+    "图灵/mysql/4、优化案例.md"
+>>>>>>> 512e2b7a6507bd586b8d3d26b9c85cf6f0e9ef79
   ]
 }
