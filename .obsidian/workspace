@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/spring/2.md",
+            "file": "算法/快速幂.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/spring/2.md",
+                "file": "算法/快速幂.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "d0841d9230d10a4b",
   "lastOpenFiles": [
-    "图灵/spring/2.md",
-    "算法/题库/15.三数之和.md",
-    "算法/简单但容易忘记.md",
-    "算法/图.md",
-    "算法/动态规划.md",
-    "算法/题库/6.Z字形变换.md",
-    "图灵/spring/1.md",
-    "算法/马拉车算法.md",
-    "算法/题库/5.最长回文子串.md",
-    "中间件/zookeeper.md"
+    "算法/快速幂.md",
+    "算法/二分查找.md",
+    "算法/二叉树.md",
+    "算法/题库/29.两数相除.md",
+    "算法/题库/50.快速幂.md",
+    "算法/位运算.md",
+    "算法/递归.md",
+    "算法/题库/25.K个一组翻转链表.md",
+    "算法/题库/23.合并K个升序链表.md",
+    "图灵/spring/2.md"
   ]
 }
