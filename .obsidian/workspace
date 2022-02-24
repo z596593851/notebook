@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "算法/简单但容易忘记.md",
+            "file": "图灵/spring/3 依赖注入.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "缓存雪崩",
+                "query": "85",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/简单但容易忘记.md",
+                "file": "图灵/spring/3 依赖注入.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "d0841d9230d10a4b",
   "lastOpenFiles": [
+    "图灵/spring/3 依赖注入.md",
+    "算法/01背包.md",
+    "算法/题库/85.最大矩形.md",
     "算法/简单但容易忘记.md",
-    "算法/题库/81.搜索旋转排序数组 II.md",
-    "算法/题库/33.搜索旋转排序数组.md",
-    "算法/题库/未命名 2.md",
-    "算法/回溯.md",
-    "算法/题库/93. 复原 IP 地址.md",
+    "算法/题库/84.柱状图中最大的矩形.md",
+    "算法/单调栈.md",
+    "算法/双指针.md",
     "算法/递归.md",
-    "算法/题库/78.子集.md",
-    "算法/题库/77.组合.md",
-    "算法/题库/76.最小覆盖字串.md"
+    "算法/题库/82.删除排序链表中的重复元素II.md",
+    "算法/题库/81.搜索旋转排序数组 II.md"
   ]
 }
