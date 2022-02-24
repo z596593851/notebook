@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "缓存雪崩",
+                "query": "85",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,6 +89,7 @@
   "active": "d0841d9230d10a4b",
   "lastOpenFiles": [
     "图灵/spring/3 依赖注入.md",
+<<<<<<< HEAD
     "算法/简单但容易忘记.md",
     "图灵/spring/2.md",
     "算法/回溯.md",
@@ -98,5 +99,16 @@
     "算法/打家劫舍.md",
     "算法/题库/32.最长有效括号.md",
     "算法/题库/31.下一个排列.md"
+=======
+    "算法/01背包.md",
+    "算法/题库/85.最大矩形.md",
+    "算法/简单但容易忘记.md",
+    "算法/题库/84.柱状图中最大的矩形.md",
+    "算法/单调栈.md",
+    "算法/双指针.md",
+    "算法/递归.md",
+    "算法/题库/82.删除排序链表中的重复元素II.md",
+    "算法/题库/81.搜索旋转排序数组 II.md"
+>>>>>>> 9597e4ca7e7a2e6449be64b5ebfee170ffa23239
   ]
 }
