@@ -9,13 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "图灵/spring/3 依赖注入.md",
-            "mode": "preview"
-=======
-            "file": "算法/题库/128.最长连续序列.md",
+            "file": "图灵/spring/4 循环依赖.md",
             "mode": "source"
->>>>>>> 617ea6f2c073e1ab996f7700a6a6e7a96a485d70
           }
         }
       }
@@ -44,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "85",
+                "query": "缓存雪崩",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/题库/128.最长连续序列.md",
+                "file": "图灵/spring/4 循环依赖.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,15 +88,15 @@
   },
   "active": "d0841d9230d10a4b",
   "lastOpenFiles": [
-    "算法/题库/128.最长连续序列.md",
-    "算法/哈希.md",
-    "算法/题库/124.二叉树中的最大路径和.md",
-    "算法/递归.md",
+    "图灵/spring/4 循环依赖.md",
+    "图灵/spring/3 依赖注入.md",
+    "算法/简单但容易忘记.md",
+    "图灵/spring/2.md",
     "算法/回溯.md",
-    "算法/题库/123.买卖股票的最佳时机III.md",
+    "算法/题库/39.组合总和.md",
     "算法/动态规划.md",
-    "算法/题库/01背包.md",
+    "算法/01背包.md",
     "算法/打家劫舍.md",
-    "图灵/spring/3 依赖注入.md"
+    "算法/题库/32.最长有效括号.md"
   ]
 }
