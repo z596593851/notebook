@@ -9,8 +9,13 @@
         "state": {
           "type": "markdown",
           "state": {
+<<<<<<< HEAD
             "file": "图灵/spring/6.md",
             "mode": "source"
+=======
+            "file": "图灵/spring/2.md",
+            "mode": "preview"
+>>>>>>> b887cadae917a153ee3c296d5a459fc9dcfd95c4
           }
         }
       }
@@ -39,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "85",
+                "query": "缓存雪崩",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +73,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "图灵/spring/6.md",
+=======
+                "file": "图灵/spring/2.md",
+>>>>>>> b887cadae917a153ee3c296d5a459fc9dcfd95c4
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +97,7 @@
   },
   "active": "d0841d9230d10a4b",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "图灵/spring/6.md",
     "图灵/spring/3 依赖注入.md",
     "算法/位运算.md",
@@ -98,5 +108,17 @@
     "算法/哈希.md",
     "算法/动态规划.md",
     "算法/题库/152.乘积最大子数组.md"
+=======
+    "图灵/spring/2.md",
+    "图灵/spring/3 依赖注入.md",
+    "图灵/spring/4 循环依赖.md",
+    "算法/简单但容易忘记.md",
+    "算法/回溯.md",
+    "算法/题库/39.组合总和.md",
+    "算法/动态规划.md",
+    "算法/01背包.md",
+    "算法/打家劫舍.md",
+    "算法/题库/32.最长有效括号.md"
+>>>>>>> b887cadae917a153ee3c296d5a459fc9dcfd95c4
   ]
 }
