@@ -1,21 +1,16 @@
 {
   "main": {
-    "id": "952fa849ef969df2",
+    "id": "c4795691fd99a702",
     "type": "split",
     "children": [
       {
-        "id": "e2fb77b8ed9bf57d",
+        "id": "d0841d9230d10a4b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "图灵/spring/6 spring容器启动过程.md",
-            "mode": "preview"
-=======
-            "file": "算法/单调栈.md",
+            "file": "图灵/spring/8.md",
             "mode": "source"
->>>>>>> ad4a7ea6a3b3e002ed97f3497e22996e388ab114
           }
         }
       }
@@ -23,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "2c28285a528131be",
+    "id": "d479228e3aa7e764",
     "type": "split",
     "children": [
       {
-        "id": "9d311d016028e37d",
+        "id": "ac207ea7d58554b6",
         "type": "tabs",
         "children": [
           {
-            "id": "dc8924eabfff96a5",
+            "id": "8279f4b72f5779a6",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,12 +34,12 @@
             }
           },
           {
-            "id": "5046ec4269ea8f77",
+            "id": "75e5ab1f0ac5462a",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "缓存雪崩",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,27 +52,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 224
   },
   "right": {
-    "id": "2ae03fe8a177f503",
+    "id": "99353a90005ae58a",
     "type": "split",
     "children": [
       {
-        "id": "b7afbabea08556f2",
+        "id": "8095eece21334af5",
         "type": "tabs",
         "children": [
           {
-            "id": "c212e67d27c151a2",
+            "id": "00f952f1eb222369",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "图灵/spring/6 spring容器启动过程.md",
-=======
-                "file": "算法/单调栈.md",
->>>>>>> ad4a7ea6a3b3e002ed97f3497e22996e388ab114
+                "file": "图灵/spring/8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,30 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e2fb77b8ed9bf57d",
+  "active": "d0841d9230d10a4b",
   "lastOpenFiles": [
-<<<<<<< HEAD
+    "图灵/spring/8.md",
+    "图灵/spring/7.md",
     "图灵/spring/6 spring容器启动过程.md",
     "图灵/spring/5 推断构造方法.md",
-    "图灵/spring/4 循环依赖.md",
     "图灵/spring/3 依赖注入.md",
+    "图灵/spring/4 循环依赖.md",
     "图灵/spring/2.md",
     "图灵/spring/1.md",
     "算法/简单但容易忘记.md",
-    "算法/回溯.md",
-    "算法/题库/39.组合总和.md",
-    "算法/动态规划.md"
-=======
-    "算法/单调栈.md",
-    "算法/贪心.md",
-    "算法/题库/218.天际线问题.md",
-    "算法/简单但容易忘记.md",
-    "算法/滑动窗口.md",
-    "算法/动态规划.md",
-    "算法/二叉树.md",
-    "算法/题库/213.打家劫舍II.md",
-    "算法/题库/198.打家劫舍.md",
-    "算法/打家劫舍.md"
->>>>>>> ad4a7ea6a3b3e002ed97f3497e22996e388ab114
+    "算法/回溯.md"
   ]
 }
