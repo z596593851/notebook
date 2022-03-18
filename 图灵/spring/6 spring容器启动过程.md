@@ -1,0 +1,9 @@
+![[Pasted image 20220309230824.png]]
+this方法会初始化DefaultListableBeanFactory、new reader、new扫描器scanner、注册各种BeanPostProcessor，如AutowiredAnnotationBeanPostProcessor处理@Autowired、@Value；CommonAnnotationBeanPostProcessor处理@Resource、@PostConstruct、@PreDestroy；ApplicationContextAwareProcessor：处理ApplicationContextAware等回调，然后执行refresh。
+
+模板方法模式：
+AnnotationConfigApplicationContext的refresh是其抽象父类AbstractApplicationContext定义的，父类的refresh过程中会调用refreshBeanFactory，这个方法是个空方法，子类AnnotationConfigApplicationContext的实现中不允许多次refresh，而子类AbstractRefreshableApplicationContext的实现中则允许多次刷新，重复刷新时会销毁旧的BeanFactory并创建新的，为了实现springmvc的热部署。
+
+![[Pasted image 20220309235006.png]]
+![[Pasted image 20220309235814.png]]
+![[Pasted image 20220310000207.png]]

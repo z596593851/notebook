@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/spring/10 aop.md",
+            "file": "图灵/spring/7.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/spring/10 aop.md",
+                "file": "图灵/spring/7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
+    "图灵/spring/7.md",
+    "图灵/spring/8.md",
     "图灵/spring/10 aop.md",
     "图灵/spring/6.md",
     "中间件/MyBatis/1.缓存.md",
@@ -95,8 +97,6 @@
     "算法/简单但容易忘记.md",
     "算法/题库/300.最长递增子序列.md",
     "算法/贪心.md",
-    "算法/优先队列（顶堆）.md",
-    "算法/题库/440.字典序的第K小数字.md",
-    "算法/题库/优先队列（顶堆）.md"
+    "算法/优先队列（顶堆）.md"
   ]
 }
