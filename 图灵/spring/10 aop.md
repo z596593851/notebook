@@ -52,3 +52,12 @@ public class UserService {
 
 Advisor = Advice + Pointcut
 
+
+# @EnableTransactionManagement
+AnnotationAwareAspectJAutoProxyCreator是一个BeanPostProcessor
+
+他的父类AbstractAutoProxyCreator的postProcessAfterInitialization
+
+在对象初始化后，postProcessAfterInitialization->getAdvicesAndAdvisorsForBean
+拿到能切当前bean的所有advisor（先找到spring容器里所有advisor类型的bean，然后把@Aspect标注的类里的方法解析成Advisor，最后判断这些Advisor的pointCut是否匹配当前bean的类，以及Advisor的方法匹配器能匹配至少一个当前bean里的方法），如果有advisor，则利用proxyFactory创建代理对象返回，否则返回原始对象。
+
