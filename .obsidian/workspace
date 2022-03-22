@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/spring/10 aop.md",
-            "mode": "preview"
+            "file": "算法/简单但容易忘记.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/spring/10 aop.md",
+                "file": "算法/简单但容易忘记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
+    "算法/简单但容易忘记.md",
+    "算法/回溯.md",
+    "算法/动态规划.md",
+    "算法/题库/329.矩阵中的最长递增路径.md",
     "图灵/spring/10 aop.md",
     "图灵/spring/8.md",
-    "算法/回溯.md",
-    "算法/简单但容易忘记.md",
     "算法/题库/301.删除无效的括号.md",
-    "算法/动态规划.md",
     "算法/题库/312.戳气球.md",
     "算法/优先队列（顶堆）.md",
-    "算法/题库/313.超级丑数.md",
-    "图灵/spring/7.md"
+    "算法/题库/313.超级丑数.md"
   ]
 }
