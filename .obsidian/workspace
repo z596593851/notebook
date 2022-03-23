@@ -1,19 +1,15 @@
 {
   "main": {
-    "id": "c4795691fd99a702",
+    "id": "952fa849ef969df2",
     "type": "split",
     "children": [
       {
-        "id": "d0841d9230d10a4b",
+        "id": "e2fb77b8ed9bf57d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "算法/简单但容易忘记.md",
-=======
-            "file": "图灵/spring/10 aop.md",
->>>>>>> 54c7d85f599fe97eb576cf579c6f380fe5617055
+            "file": "图灵/spring/11.事务.md",
             "mode": "source"
           }
         }
@@ -22,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d479228e3aa7e764",
+    "id": "2c28285a528131be",
     "type": "split",
     "children": [
       {
-        "id": "ac207ea7d58554b6",
+        "id": "9d311d016028e37d",
         "type": "tabs",
         "children": [
           {
-            "id": "8279f4b72f5779a6",
+            "id": "dc8924eabfff96a5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -38,12 +34,12 @@
             }
           },
           {
-            "id": "75e5ab1f0ac5462a",
+            "id": "5046ec4269ea8f77",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "SmartInstantiationAwareBeanPostProcessor",
+                "query": "戳气球",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,23 +52,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224
+    "width": 298
   },
   "right": {
-    "id": "99353a90005ae58a",
+    "id": "2ae03fe8a177f503",
     "type": "split",
     "children": [
       {
-        "id": "8095eece21334af5",
+        "id": "b7afbabea08556f2",
         "type": "tabs",
         "children": [
           {
-            "id": "00f952f1eb222369",
+            "id": "c212e67d27c151a2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/简单但容易忘记.md",
+                "file": "图灵/spring/11.事务.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,28 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "d0841d9230d10a4b",
+  "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
-    "算法/简单但容易忘记.md",
-    "算法/回溯.md",
-    "算法/动态规划.md",
-    "算法/题库/329.矩阵中的最长递增路径.md",
+    "图灵/spring/11.事务.md",
     "图灵/spring/10 aop.md",
+    "算法/简单但容易忘记.md",
+    "算法/快速幂.md",
+    "算法/动态规划.md",
+    "算法/题库/337.打家劫舍III.md",
+    "算法/回溯.md",
+    "算法/题库/329.矩阵中的最长递增路径.md",
     "图灵/spring/8.md",
-<<<<<<< HEAD
-    "算法/题库/301.删除无效的括号.md",
-    "算法/题库/312.戳气球.md",
-    "算法/优先队列（顶堆）.md",
-    "算法/题库/313.超级丑数.md"
-=======
-    "图灵/spring/9 整合mybatis.md",
-    "图灵/spring/4 循环依赖.md",
-    "图灵/spring/6 spring容器启动过程.md",
-    "图灵/spring/7.md",
-    "中间件/MyBatis/1.缓存.md",
-    "中间件/MyBatis/6.生命周期.md",
-    "中间件/MyBatis/5.反射类.md",
-    "中间件/MyBatis/4.日志.md"
->>>>>>> 54c7d85f599fe97eb576cf579c6f380fe5617055
+    "算法/题库/301.删除无效的括号.md"
   ]
 }
