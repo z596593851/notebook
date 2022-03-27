@@ -165,7 +165,7 @@ public class TransactionAwareCacheDecorator implements Cache {
 }
 ```
 ## 3.责任链模式
-拦截器
+拦截器，spring aop的执行链
 
 ## 4.代理模式
 AOP

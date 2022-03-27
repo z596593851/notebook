@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/spring/11.事务.md",
+            "file": "图灵/spring/14.springboot自动装配.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/spring/11.事务.md",
+                "file": "图灵/spring/14.springboot自动装配.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
-    "图灵/spring/11.事务.md",
-    "图灵/spring/10 aop.md",
-    "算法/简单但容易忘记.md",
-    "算法/快速幂.md",
-    "算法/动态规划.md",
-    "算法/题库/337.打家劫舍III.md",
-    "算法/回溯.md",
-    "算法/题库/329.矩阵中的最长递增路径.md",
+    "图灵/spring/14.springboot自动装配.md",
+    "中间件/springboot/内置tomcat启动流程.md",
     "图灵/spring/8.md",
-    "算法/题库/301.删除无效的括号.md"
+    "图灵/spring/7.md",
+    "图灵/spring/6 spring容器启动过程.md",
+    "图灵/spring/13.springmvc启动流程.md",
+    "图灵/spring/12.springmvc.md",
+    "中间件/springboot/Spring中的设计模式.md",
+    "中间件/springboot/注解解析核心.md",
+    "图灵/spring/11.事务.md"
   ]
 }
