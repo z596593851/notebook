@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "图灵/spring/14.springboot自动装配.md",
-            "mode": "preview"
+            "mode": "source"
           }
         }
       }
@@ -89,14 +89,14 @@
   "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
     "图灵/spring/14.springboot自动装配.md",
+    "图灵/spring/13.springmvc启动流程.md",
     "中间件/springboot/内置tomcat启动流程.md",
+    "中间件/springboot/注解解析核心.md",
     "图灵/spring/8.md",
     "图灵/spring/7.md",
     "图灵/spring/6 spring容器启动过程.md",
-    "图灵/spring/13.springmvc启动流程.md",
     "图灵/spring/12.springmvc.md",
     "中间件/springboot/Spring中的设计模式.md",
-    "中间件/springboot/注解解析核心.md",
     "图灵/spring/11.事务.md"
   ]
 }
