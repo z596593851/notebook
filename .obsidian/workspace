@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/spring/14.springboot自动装配.md",
-            "mode": "source"
+            "file": "设计模式/MyBatis Plugin中的责任链和代理模式.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/spring/14.springboot自动装配.md",
+                "file": "设计模式/MyBatis Plugin中的责任链和代理模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
-    "图灵/spring/14.springboot自动装配.md",
-    "图灵/spring/13.springmvc启动流程.md",
-    "中间件/springboot/内置tomcat启动流程.md",
-    "中间件/springboot/注解解析核心.md",
-    "图灵/spring/8.md",
-    "图灵/spring/7.md",
-    "图灵/spring/6 spring容器启动过程.md",
+    "设计模式/MyBatis Plugin中的责任链和代理模式.md",
+    "中间件/MyBatis/3.插件（拦截器）.md",
+    "中间件/MyBatis/4.日志.md",
+    "中间件/MyBatis/6.生命周期.md",
+    "中间件/MyBatis/5.反射类.md",
+    "中间件/MyBatis/2.事务.md",
+    "中间件/MyBatis/1.缓存.md",
     "图灵/spring/12.springmvc.md",
-    "中间件/springboot/Spring中的设计模式.md",
-    "图灵/spring/11.事务.md"
+    "图灵/spring/14.springboot自动装配.md",
+    "图灵/spring/13.springmvc启动流程.md"
   ]
 }
