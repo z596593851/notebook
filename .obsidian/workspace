@@ -9,7 +9,11 @@
         "state": {
           "type": "markdown",
           "state": {
+<<<<<<< HEAD
             "file": "算法/动态规划.md",
+=======
+            "file": "中间件/MyBatis/8.spring整合mybatis.md",
+>>>>>>> refs/remotes/origin/master
             "mode": "source"
           }
         }
@@ -52,7 +56,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298
+    "width": 100
   },
   "right": {
     "id": "2ae03fe8a177f503",
@@ -68,7 +72,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "算法/动态规划.md",
+=======
+                "file": "中间件/MyBatis/8.spring整合mybatis.md",
+>>>>>>> refs/remotes/origin/master
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +96,7 @@
   },
   "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "算法/动态规划.md",
     "算法/题库/368.最大整除子集.md",
     "算法/题库/446.等差数列划分 II - 子序列.md",
@@ -98,5 +107,17 @@
     "算法/递归.md",
     "算法/题库/394.字符串解码.md",
     "算法/位运算.md"
+=======
+    "中间件/MyBatis/8.spring整合mybatis.md",
+    "中间件/MyBatis/6.Mapper的动态代理.md",
+    "中间件/MyBatis/7.生命周期.md",
+    "中间件/MyBatis/2.事务.md",
+    "中间件/MyBatis/5.反射类.md",
+    "中间件/MyBatis/4.日志.md",
+    "中间件/MyBatis/3.插件（拦截器）.md",
+    "中间件/MyBatis/1.缓存.md",
+    "图灵/spring/15.md",
+    "设计模式/MyBatis Plugin中的责任链和代理模式.md"
+>>>>>>> refs/remotes/origin/master
   ]
 }

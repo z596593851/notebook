@@ -42,7 +42,6 @@ public class SqlCostTimeInterceptor implements Interceptor {
 ```
 `Interceptor`接口以及`InterceptorChain`类：
 ```java
-
 public class Invocation {
   private final Object target;
   private final Method method;
@@ -52,12 +51,15 @@ public class Invocation {
     return method.invoke(target, args);
   }
 }
+```
+```java
 public interface Interceptor {
   Object intercept(Invocation invocation) throws Throwable;
   Object plugin(Object target);
   void setProperties(Properties properties);
 }
-
+```
+```java
 public class InterceptorChain {
   private final List<Interceptor> interceptors = new ArrayList<Interceptor>();
 
@@ -165,3 +167,129 @@ public class Plugin implements InvocationHandler {
 }
 ```
 当执行 Executor、StatementHandler、ParameterHandler、ResultSetHandler 这四个类上的某个方法的时候，MyBatis 会嵌套执行每层代理对象（Plugin 对象）上的 invoke() 方法。而 invoke() 方法会先执行代理对象中的 interceptor 的 intecept() 函数，然后再执行被代理对象上的方法。就这样，一层一层地把代理对象上的 intercept() 函数执行完之后，MyBatis 才最终执行那 4 个原始类对象上的方法。
+
+上述代码简化一下：
+
+被代理接口：
+```java
+public interface Person {  
+    void say();  
+}
+```
+
+被代理类：
+```java
+public class Tom implements Person{
+    @Override
+    public void say() {
+        System.out.println("hi");
+    }
+}
+```
+
+核心代理类生成器：
+```java
+public class Plugin implements InvocationHandler {
+    private final Object target;
+    private final Interceptor interceptor;
+
+    private Plugin(Object target, Interceptor interceptor) {
+        this.target = target;
+        this.interceptor = interceptor;
+    }
+
+    // wrap()静态方法，用来生成target的动态代理，
+    // 动态代理对象=target对象+interceptor对象。
+    public static Object wrap(Object target, Interceptor interceptor) {
+        Class<?> type = target.getClass();
+        return Proxy.newProxyInstance(
+                type.getClassLoader(),
+                new Class[]{target.getClass()},
+                new Plugin(target, interceptor));
+    }
+
+    // 调用target上的f()方法，会触发执行下面这个方法。
+    // 这个方法包含：执行interceptor的intecept()方法 + 执行target上f()方法。
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        return interceptor.intercept(new Invocation(target, method, args));
+    }
+}
+```
+
+拦截器：
+```java
+public interface Interceptor {
+    Object intercept(Invocation invocation) throws Throwable;
+    Object plugin(Object target);
+}
+```
+
+拦截器实现类：
+```java
+public class MyInterceptor1 implements Interceptor {
+    @Override
+    public Object intercept(Invocation invocation) throws Throwable {
+        System.out.println("增强1");
+        return invocation.proceed();
+    }
+
+    @Override
+    public Object plugin(Object target) {
+        return Plugin.wrap(target,this);
+    }
+}
+```
+
+拦截器链：
+```java
+public class InterceptorChain {
+    private final List<Interceptor> interceptors = new ArrayList<Interceptor>();
+
+    public Object pluginAll(Object target) {
+        for (Interceptor interceptor : interceptors) {
+            target = interceptor.plugin(target);
+        }
+        return target;
+    }
+
+    public void addInterceptor(Interceptor interceptor) {
+        interceptors.add(interceptor);
+    }
+
+}
+```
+
+方法包装执行类：
+```java
+public class Invocation {
+    private final Object target;
+    private final Method method;
+    private final Object[] args;
+
+    public Invocation(Object target, Method method, Object[] args) {
+        this.target = target;
+        this.method = method;
+        this.args = args;
+    }
+
+    public Object proceed() throws InvocationTargetException, IllegalAccessException {
+        return method.invoke(target, args);
+    }
+}
+```
+
+测试：
+```java
+public class Test {
+    public static void main(String[] args) {
+        InterceptorChain chain=new InterceptorChain();
+        chain.addInterceptor(new MyInterceptor1());
+        chain.addInterceptor(new MyInterceptor2());
+
+        Person tom=new Tom();
+        Person tom2=(Tom)chain.pluginAll(tom);
+        tom2.say();
+    }
+}
+```
