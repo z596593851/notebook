@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/spring/11.事务.md",
+            "file": "算法/题库/413.等差数列划分.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "戳气球",
+                "query": "等差",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -48,7 +48,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -68,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/spring/11.事务.md",
+                "file": "算法/题库/413.等差数列划分.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +89,15 @@
   },
   "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
-    "图灵/spring/11.事务.md",
-    "图灵/spring/10 aop.md",
+    "算法/题库/413.等差数列划分.md",
     "算法/简单但容易忘记.md",
-    "算法/快速幂.md",
-    "算法/动态规划.md",
-    "算法/题库/337.打家劫舍III.md",
-    "算法/回溯.md",
-    "算法/题库/329.矩阵中的最长递增路径.md",
-    "图灵/spring/8.md",
-    "算法/题库/301.删除无效的括号.md"
+    "算法/贪心.md",
+    "算法/题库/406.根据身高重建队列.md",
+    "算法/递归.md",
+    "算法/题库/394.字符串解码.md",
+    "算法/位运算.md",
+    "算法/题库/371.两整数之和.md",
+    "算法/题库/352.将数据流变为多个不相交区间.md",
+    "算法/题库/354.俄罗斯套娃信封问题.md"
   ]
 }
