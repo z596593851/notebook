@@ -9,8 +9,17 @@
         "state": {
           "type": "markdown",
           "state": {
+<<<<<<< HEAD
             "file": "图灵/spring/6.属性注入.md",
             "mode": "preview"
+=======
+<<<<<<< HEAD
+            "file": "算法/动态规划.md",
+=======
+            "file": "中间件/MyBatis/8.spring整合mybatis.md",
+>>>>>>> refs/remotes/origin/master
+            "mode": "source"
+>>>>>>> refs/remotes/origin/master
           }
         }
       }
@@ -39,7 +48,11 @@
             "state": {
               "type": "search",
               "state": {
+<<<<<<< HEAD
                 "query": "lazy",
+=======
+                "query": "等差",
+>>>>>>> refs/remotes/origin/master
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +81,15 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "图灵/spring/6.属性注入.md",
+=======
+<<<<<<< HEAD
+                "file": "算法/动态规划.md",
+=======
+                "file": "中间件/MyBatis/8.spring整合mybatis.md",
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/master
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +109,7 @@
   },
   "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "图灵/spring/6.属性注入.md",
     "图灵/spring/5.循环依赖.md",
     "图灵/spring/4.推断构造方法.md",
@@ -98,5 +120,30 @@
     "图灵/spring/2.invokeBeanFactoryPostProcessors.md",
     "图灵/spring/1.prepareBeanFactory.md",
     "图灵/spring/aop.md"
+=======
+<<<<<<< HEAD
+    "算法/动态规划.md",
+    "算法/题库/368.最大整除子集.md",
+    "算法/题库/446.等差数列划分 II - 子序列.md",
+    "算法/题库/413.等差数列划分.md",
+    "算法/简单但容易忘记.md",
+    "算法/贪心.md",
+    "算法/题库/406.根据身高重建队列.md",
+    "算法/递归.md",
+    "算法/题库/394.字符串解码.md",
+    "算法/位运算.md"
+=======
+    "中间件/MyBatis/8.spring整合mybatis.md",
+    "中间件/MyBatis/6.Mapper的动态代理.md",
+    "中间件/MyBatis/7.生命周期.md",
+    "中间件/MyBatis/2.事务.md",
+    "中间件/MyBatis/5.反射类.md",
+    "中间件/MyBatis/4.日志.md",
+    "中间件/MyBatis/3.插件（拦截器）.md",
+    "中间件/MyBatis/1.缓存.md",
+    "图灵/spring/15.md",
+    "设计模式/MyBatis Plugin中的责任链和代理模式.md"
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/master
   ]
 }
