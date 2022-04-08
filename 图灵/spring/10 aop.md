@@ -53,7 +53,7 @@ public class UserService {
 Advisor = Advice + Pointcut
 
 
-# @EnableTransactionManagement
+# @EnableAspectJAutoProxy
 AnnotationAwareAspectJAutoProxyCreator是一个BeanPostProcessor
 
 他的父类AbstractAutoProxyCreator的postProcessAfterInitialization

@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "中间件/MyBatis/8.spring整合mybatis.md",
-            "mode": "source"
+            "file": "图灵/spring/6.属性注入.md",
+            "mode": "preview"
           }
         }
       }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "戳气球",
+                "query": "lazy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 100
+    "width": 212
   },
   "right": {
     "id": "2ae03fe8a177f503",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "中间件/MyBatis/8.spring整合mybatis.md",
+                "file": "图灵/spring/6.属性注入.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "e2fb77b8ed9bf57d",
   "lastOpenFiles": [
-    "中间件/MyBatis/8.spring整合mybatis.md",
-    "中间件/MyBatis/6.Mapper的动态代理.md",
-    "中间件/MyBatis/7.生命周期.md",
-    "中间件/MyBatis/2.事务.md",
-    "中间件/MyBatis/5.反射类.md",
-    "中间件/MyBatis/4.日志.md",
-    "中间件/MyBatis/3.插件（拦截器）.md",
-    "中间件/MyBatis/1.缓存.md",
-    "图灵/spring/15.md",
-    "设计模式/MyBatis Plugin中的责任链和代理模式.md"
+    "图灵/spring/6.属性注入.md",
+    "图灵/spring/5.循环依赖.md",
+    "图灵/spring/4.推断构造方法.md",
+    "图灵/spring/3.finishBeanFactoryInitialization.md",
+    "图灵/spring/10 aop.md",
+    "图灵/spring/spring容器启动过程.md",
+    "图灵/spring/11.事务.md",
+    "图灵/spring/2.invokeBeanFactoryPostProcessors.md",
+    "图灵/spring/1.prepareBeanFactory.md",
+    "图灵/spring/aop.md"
   ]
 }
