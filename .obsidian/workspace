@@ -1,25 +1,16 @@
 {
   "main": {
-    "id": "952fa849ef969df2",
+    "id": "4853e830d20bb461",
     "type": "split",
     "children": [
       {
-        "id": "e2fb77b8ed9bf57d",
+        "id": "2cc99276e7c5fcdf",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "图灵/spring/6.属性注入.md",
+            "file": "图灵/mysql/5、事务的隔离级别.md",
             "mode": "preview"
-=======
-<<<<<<< HEAD
-            "file": "算法/动态规划.md",
-=======
-            "file": "中间件/MyBatis/8.spring整合mybatis.md",
->>>>>>> refs/remotes/origin/master
-            "mode": "source"
->>>>>>> refs/remotes/origin/master
           }
         }
       }
@@ -27,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "2c28285a528131be",
+    "id": "411f63446ba42b8a",
     "type": "split",
     "children": [
       {
-        "id": "9d311d016028e37d",
+        "id": "f042d4585cdf5ad7",
         "type": "tabs",
         "children": [
           {
-            "id": "dc8924eabfff96a5",
+            "id": "1bedb12c5f4b9b3a",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,16 +34,12 @@
             }
           },
           {
-            "id": "5046ec4269ea8f77",
+            "id": "f7097a69d66a5a47",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-<<<<<<< HEAD
-                "query": "lazy",
-=======
-                "query": "等差",
->>>>>>> refs/remotes/origin/master
+                "query": "幻读",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,31 +52,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212
+    "width": 228
   },
   "right": {
-    "id": "2ae03fe8a177f503",
+    "id": "40f674dd2fb92ac4",
     "type": "split",
     "children": [
       {
-        "id": "b7afbabea08556f2",
+        "id": "1a7bf856dfcd7a9c",
         "type": "tabs",
         "children": [
           {
-            "id": "c212e67d27c151a2",
+            "id": "6c7715510428f73e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "图灵/spring/6.属性注入.md",
-=======
-<<<<<<< HEAD
-                "file": "算法/动态规划.md",
-=======
-                "file": "中间件/MyBatis/8.spring整合mybatis.md",
->>>>>>> refs/remotes/origin/master
->>>>>>> refs/remotes/origin/master
+                "file": "图灵/mysql/5、事务的隔离级别.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,43 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e2fb77b8ed9bf57d",
+  "active": "2cc99276e7c5fcdf",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "图灵/spring/6.属性注入.md",
-    "图灵/spring/5.循环依赖.md",
-    "图灵/spring/4.推断构造方法.md",
-    "图灵/spring/3.finishBeanFactoryInitialization.md",
-    "图灵/spring/10 aop.md",
-    "图灵/spring/spring容器启动过程.md",
-    "图灵/spring/11.事务.md",
-    "图灵/spring/2.invokeBeanFactoryPostProcessors.md",
-    "图灵/spring/1.prepareBeanFactory.md",
-    "图灵/spring/aop.md"
-=======
-<<<<<<< HEAD
-    "算法/动态规划.md",
-    "算法/题库/368.最大整除子集.md",
-    "算法/题库/446.等差数列划分 II - 子序列.md",
-    "算法/题库/413.等差数列划分.md",
-    "算法/简单但容易忘记.md",
-    "算法/贪心.md",
-    "算法/题库/406.根据身高重建队列.md",
-    "算法/递归.md",
-    "算法/题库/394.字符串解码.md",
-    "算法/位运算.md"
-=======
-    "中间件/MyBatis/8.spring整合mybatis.md",
-    "中间件/MyBatis/6.Mapper的动态代理.md",
-    "中间件/MyBatis/7.生命周期.md",
-    "中间件/MyBatis/2.事务.md",
-    "中间件/MyBatis/5.反射类.md",
-    "中间件/MyBatis/4.日志.md",
-    "中间件/MyBatis/3.插件（拦截器）.md",
-    "中间件/MyBatis/1.缓存.md",
-    "图灵/spring/15.md",
-    "设计模式/MyBatis Plugin中的责任链和代理模式.md"
->>>>>>> refs/remotes/origin/master
->>>>>>> refs/remotes/origin/master
+    "图灵/mysql/5、事务的隔离级别.md",
+    "mysql/隔离级别以及mvcc.md",
+    "图灵/mysql/6、锁.md",
+    "图灵/mysql/4、成本计算.md",
+    "图灵/mysql/Binlog、Undolog、Redolog.md",
+    "图灵/mysql/8、InnoDB三大特性.md",
+    "图灵/mysql/3、优化案例.md",
+    "图灵/mysql/mysql底层结构.md",
+    "图灵/mysql/mysql对索引的一些优化.md",
+    "图灵/mysql/2、explain.md"
   ]
 }
