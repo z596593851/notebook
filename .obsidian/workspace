@@ -1,15 +1,27 @@
 {
   "main": {
+<<<<<<< HEAD
     "id": "7efebcdf6c651574",
     "type": "split",
     "children": [
       {
         "id": "2b64c016d1320dcc",
+=======
+    "id": "4853e830d20bb461",
+    "type": "split",
+    "children": [
+      {
+        "id": "2cc99276e7c5fcdf",
+>>>>>>> refs/remotes/origin/master
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
+<<<<<<< HEAD
             "file": "算法/题库/576.出界的路径数.md",
+=======
+            "file": "图灵/mysql/5、事务的隔离级别.md",
+>>>>>>> refs/remotes/origin/master
             "mode": "preview"
           }
         }
@@ -18,6 +30,7 @@
     "direction": "vertical"
   },
   "left": {
+<<<<<<< HEAD
     "id": "396d6a995e21de2c",
     "type": "split",
     "children": [
@@ -27,6 +40,17 @@
         "children": [
           {
             "id": "00ef4963a0f77d93",
+=======
+    "id": "411f63446ba42b8a",
+    "type": "split",
+    "children": [
+      {
+        "id": "f042d4585cdf5ad7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1bedb12c5f4b9b3a",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -34,12 +58,20 @@
             }
           },
           {
+<<<<<<< HEAD
             "id": "24932d168ebae1c7",
+=======
+            "id": "f7097a69d66a5a47",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
+<<<<<<< HEAD
                 "query": "576",
+=======
+                "query": "幻读",
+>>>>>>> refs/remotes/origin/master
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -52,6 +84,7 @@
       }
     ],
     "direction": "horizontal",
+<<<<<<< HEAD
     "width": 300
   },
   "right": {
@@ -64,11 +97,29 @@
         "children": [
           {
             "id": "4daddf6fe2292fb8",
+=======
+    "width": 228
+  },
+  "right": {
+    "id": "40f674dd2fb92ac4",
+    "type": "split",
+    "children": [
+      {
+        "id": "1a7bf856dfcd7a9c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c7715510428f73e",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "算法/题库/576.出界的路径数.md",
+=======
+                "file": "图灵/mysql/5、事务的隔离级别.md",
+>>>>>>> refs/remotes/origin/master
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,6 +137,7 @@
     "width": 300,
     "collapsed": true
   },
+<<<<<<< HEAD
   "active": "2b64c016d1320dcc",
   "lastOpenFiles": [
     "算法/题库/576.出界的路径数.md",
@@ -98,5 +150,19 @@
     "算法/题库/526. 优美的排列.md",
     "算法/递归.md",
     "算法/题库/502.IPO.md"
+=======
+  "active": "2cc99276e7c5fcdf",
+  "lastOpenFiles": [
+    "图灵/mysql/5、事务的隔离级别.md",
+    "mysql/隔离级别以及mvcc.md",
+    "图灵/mysql/6、锁.md",
+    "图灵/mysql/4、成本计算.md",
+    "图灵/mysql/Binlog、Undolog、Redolog.md",
+    "图灵/mysql/8、InnoDB三大特性.md",
+    "图灵/mysql/3、优化案例.md",
+    "图灵/mysql/mysql底层结构.md",
+    "图灵/mysql/mysql对索引的一些优化.md",
+    "图灵/mysql/2、explain.md"
+>>>>>>> refs/remotes/origin/master
   ]
 }
