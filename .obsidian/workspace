@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "算法/题库/502.IPO.md",
+            "file": "算法/题库/576.出界的路径数.md",
             "mode": "preview"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "576",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/题库/502.IPO.md",
+                "file": "算法/题库/576.出界的路径数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,14 +88,15 @@
   },
   "active": "2b64c016d1320dcc",
   "lastOpenFiles": [
-    "算法/题库/502.IPO.md",
-    "算法/优先队列（顶堆）.md",
-    "算法/Rand7()生成Rand10().md",
-    "算法/位运算.md",
-    "算法/简单但容易忘记.md",
-    "算法/哈希.md",
-    "算法/题库/447.回旋镖的数量.md",
+    "算法/题库/576.出界的路径数.md",
     "算法/动态规划.md",
-    "算法/递归.md"
+    "算法/回溯.md",
+    "算法/简单但容易忘记.md",
+    "JDK/字节码/ASM4文档翻译/5.实践.md",
+    "JDK/字节码/ASM4文档翻译/2.Classes.md",
+    "图灵/spring/2.md",
+    "算法/题库/526. 优美的排列.md",
+    "算法/递归.md",
+    "算法/题库/502.IPO.md"
   ]
 }
