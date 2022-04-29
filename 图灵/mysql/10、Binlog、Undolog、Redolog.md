@@ -7,16 +7,18 @@
 可能只改了几条，但会导致一整页的刷新；
 随机io性能差
 
+![[Pasted image 20220424194117.png]]
+
 # BinLog
 binlog是server层的，主要用来做主从同步，有以下两种方式：
 - Statement level（基于SQL语句的复制，默认）
 每一条会修改数据的sql语句会记录到binlog中。
-优点：不需要记录每一条SQL语句与每行的数据变化，这样子binlog的日志也会比较少，减少了磁盘IO，提高性能。
-缺点：在某些情况下会导致master-slave中的数据不一致(如sleep()函数， last\_insert\_id()，以及user-defined functions(udf)等会出现问题)
+优点：不需要记录每一条SQL语句与每行的数据变化，这样子binlog的日志也会比较少，减少了磁盘IO，提高性能，主从复制的延迟低。
+缺点：在某些情况下会导致master-slave中的数据不一致，如一些依赖sql执行时机和系统变量的sql，如UUID()、RAND()，和UDF(用户自定义)函数；一些有自增主键的insert语句、以及没有索引的update/delete，会降低从库执行的效率。
 
 - Row level（基于行的复制）
 不记录每一条SQL语句的上下文信息，仅需记录哪条数据被修改了，修改成了什么样子了。
-优点：不会出现某些特定情况下的存储过程、或function、或trigger的调用和触 发无法被正确复制的问题。
+优点：所有的变更操作都可以被正确的备份
 缺点：会产生大量的日志，尤其是alter table的时候会让日志暴涨。
 
 无论是增量备份还是主从复制，都是需要开启mysql-binlog日志，最好跟数据目录设置到不同的磁盘分区，可以降低io等待，提升性能；并且在磁盘故障的时候可以利用mysql-binlog恢复数据。
@@ -28,7 +30,8 @@ sync\_binlog：是MySQL 的二进制日志（binary log）同步到磁盘的频�
 - **sync\_binlog=n**，当每进行n次事务提交之后，MySQL将进行一次fsync之类的磁盘同步指令来将binlog\_cache中的数据强制写入磁盘。
 
 # Undo log
-记录了当前数据所处事务的事务id，以及当前数据对应的undo日志，所以可以根据undo日志在事务失败时回滚当前事务内的所有操作。
+在事务开始之前产生，记录了当前事务的id。是一种逻辑日志，在执行undo的时候，仅仅是将数据从逻辑上恢复至事务之前的状态，而不是从物理页面上操作实现的，这一点是不同于redo log的。并且undo log也会产生redo log。
+redo存放在重做日志文件中，与redo不同，undo存放在数据库内部的一个特殊段（segment）中，这个段称为undo段（undo segment）。undo段位于共享表空间内。可以通过py_innodb_page_info.py工具来查看当前共享表空间中undo的数量。
 ![[Pasted image 20220202224222.png]]
 
 # Redo Log
@@ -42,10 +45,10 @@ page number：页号
 
 ## redo log buffer的刷盘时机
 - **innodb\_flush\_log\_at\_trx\_commit=0**
-表示每隔一秒把redolog buffer刷到文件系统中(os buffer)去，并且调用文件系统的“flush”操作将缓存刷新到磁盘上去。也就是说一秒之前的日志都保存在日志缓冲区，也就是内存上，如果机器宕掉，可能丢失1秒的事务数据。
+表示每隔一秒把redolog buffer刷到文件系统中(os buffer)去，并且调用文件系统的“flush”操作将缓存刷新到磁盘上去（相当于异步刷盘）。也就是说一秒之前的日志都保存在日志缓冲区，也就是内存上，如果机器宕掉，可能丢失1秒的事务数据。
 
 - **innodb\_flush\_log\_at\_trx\_commit=1（默认）**
-表示在每次事务提交的时候，都把redolog buffer刷到文件系统中(os buffer)去，并且调用文件系统的“flush”操作将缓存刷新到磁盘上去。这样的话，数据库对IO的要求就非常高了，如果底层的硬件提供的IOPS比较差，那么MySQL数据库的并发很快就会由于硬件IO的问题而无法提升。
+表示在每次事务提交的时候，都把redolog buffer刷到文件系统中(os buffer)去，并且调用文件系统的“flush”操作将缓存刷新到磁盘上去（相当于同步刷盘）。这样的话，数据库对IO的要求就非常高了，如果底层的硬件提供的IOPS比较差，那么MySQL数据库的并发很快就会由于硬件IO的问题而无法提升。
 
 - **innodb\_flush\_log\_at\_trx\_commit=2**
 表示在每次事务提交的时候会把log buffer刷到文件系统(os buffer)中去，但并不会立即刷写到磁盘。如果只是MySQL数据库挂掉了，由于文件系统没有问题，那么对应的事务数据并没有丢失。只有在数据库所在的主机操作系统损坏或者突然掉电的情况下，数据库的事务数据可能丢失1秒之类的事务数据。这样的好处，减少了事务数据丢失的概率，而对底层硬件的IO要求也没有那么高(log buffer写到文件系统中，一般只是从log buffer的内存转移的文件系统的内存缓存中，对底层IO没有压力)。
@@ -80,12 +83,24 @@ Log Sequence Number：每条redo日志都有对应的lsn，mysql可以根据lsn�
 2.创建新纪录
 
 # undo log、redo log的顺序
-![[Pasted image 20220203001440.png]]
+![[Pasted image 20220428205029.png]]
 
 # mysql数据恢复
 mysql异常关闭，如果事务还未提交，则使用undo log对事务进行回滚；如果事务已经提交，则使用redo log恢复数据。
 
 为何不用binlog恢复？因为binlog属于逻辑日志，记录了某条sql对某行记录的影响，是偏业务角度的日志，主要用来人工恢复数据，无法根据binlog判断某些数据是否真的落盘了；而redo log是偏物理层面的日志，可以反映出某条数据是否落盘
+
+# 组提交
+## binlog组提交
+事务执行过程中，先把binlog写到 binlog cache，事务提交的时候，再把 binlog cache 写到内核缓冲区，再用fsync()刷到磁盘的binlog 文件中。每个线程都有自己的binlog cache，但是刷到内核缓冲区时是公用的存储空间。此时如果有多个事务都提交到了内核缓冲区，会一并刷到磁盘上，这就是所谓的组提交。
+
+## redo log组提交
+不同于binlog cache，redo log是多个线程共用一个redo log buffer。当innodb\_flush\_log\_at\_trx\_commit=1时，如果一个事务提交到redo log buffer时，也有其他线程提交到了redo log buffer，就会一并fsync()到磁盘。
+
+为什么 binlog cache 是每个线程自己维护的，而 redo log buffer 是全局共用的？
+
+1. 一个事务就是一个线程，一个事务里的binlog应该是连续的，不允许其他事务插入，等事务提交后再一起将binlog写入文件。
+2. binlog存储是以statement或者row格式存储的，而redo log是以page页格式存储的。page格式，天生就是共有的，而row格式，只跟当前事务相关
 
 # Redo log和Binlog的2pc
 如果redo log和binlog不一致，会导致发生宕机后主从数据的不一致（主设备从redo log恢复，从设备从binlog恢复）。
@@ -96,12 +111,13 @@ mysql异常关闭，如果事务还未提交，则使用undo log对事务进行�
 
 如果发生宕机，若发现redo log处于commit状态，说明双方数据处于一致状态，则提交redolog；若发现redo log处于prepare状态，以redolog中的xid与binlog中的xid进行比较，如果xid在binlog中则提交，否则回滚。（xid是用来标记log中发生数据更改的第几个event）。
 
-### 组提交
+## Redo log和Binlog的组提交
 - 在没有开启binlog时：
 Redo log的刷盘操作（指的是从redolog buffer中刷到redolog 磁盘上）将会是最终影响MySQL TPS的瓶颈所在。为了缓解这一问题，MySQL使用了组提交，将多个刷盘操作合并成一个，如果说10个事务依次排队刷盘的时间成本是10，那么将这10个事务一次性一起刷盘的时间成本则近似于1。
 - 当开启binlog时：
 为了保证Redo log和binlog的数据一致性，MySQL使用了二阶段提交，由binlog作为事务的协调者。而引入二阶段提交使得binlog又成为了性能瓶颈，先前的Redo log 组提交 也成了摆设。为了再次缓解这一问题，MySQL增加了binlog的组提交，目的同样是将binlog的多个刷盘操作合并成一个，结合Redo log本身已经实现的 组提交，分为三个阶段(Flush 阶段、Sync 阶段、Commit 阶段)完成binlog 组提交，最大化每次刷盘的收益，弱化磁盘瓶颈，提高性能。
 ![[Pasted image 20210526211843.png]]
+![[Pasted image 20220424210354.png]]
 ![[Pasted image 20210526211859.png]]
 ![[Pasted image 20210526212116.png]]
 ![[Pasted image 20210526212134.png]]
@@ -120,7 +136,7 @@ Redo log的刷盘操作（指的是从redolog buffer中刷到redolog 磁盘上�
 **Flush 阶段 (图中第一个渡口)**
 -   首先获取队列中的事务组
 -   将Redo log中prepare阶段的数据刷盘(图中Flush Redo log)
--   将binlog数据写入文件系统缓冲区（os cache，而不是磁盘），并不能保证数据库崩溃时binlog不丢失 (图中Write binlog)
+-   将binlog数据写入文件系统缓冲区（os cache，内核缓冲区，而不是磁盘），并不能保证数据库崩溃时binlog不丢失 (图中Write binlog)
 -   Flush阶段队列的作用是提供了Redo log的组提交
 -   如果在这一步完成后数据库崩溃，由于协调者binlog中不保证有该组事务的记录，所以MySQL可能会在重启后回滚该组事务
     
