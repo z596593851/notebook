@@ -1,5 +1,6 @@
 ### Semaphore
-原理：共享锁
+Semaphore：抢车位
+![[Pasted image 20210727191351.png]]
 
 加锁时从总资源中扣取，小于0就阻塞：
 ```java
@@ -110,9 +111,10 @@ private void doReleaseShared() {
 }
 ```
 ### CountDownLatch
-原理：共享锁
+数量减到0才开工，原理：共享锁
+![[Pasted image 20210727191323.png]]
 
-CountDownLatch在初始化时会将state置为指定值，主线程在调await()时，在state减为0前会无脑返回-1使得线程阻塞：
+CountDownLatch在初始化时会将state置为指定值，主线程在调await()时，只要state不为0都会无脑返回-1使得线程阻塞；当state减为0前，其他线程调用countDown时state--；当state能减为0时，其他线程调用countDown时会唤醒主线程：
 ```java
 public void await() throws InterruptedException {  
 	sync.acquireSharedInterruptibly(1);  
@@ -138,9 +140,11 @@ public void countDown() {
 
 public final boolean releaseShared(int arg) {  
     if (tryReleaseShared(arg)) {  
+		//减为0时进入，唤醒被阻塞的主线程
         doReleaseShared();  
 		return true; 
 	}  
+	//其他情况下无所谓
 	return false;
 }
 
@@ -159,7 +163,8 @@ protected boolean tryReleaseShared(int releases) {
 
 
 ### CyclicBarrier
-原理：Rentrenlock和Condition
+全到齐了才开工，原理：Rentrenlock和Condition
+![[Pasted image 20210727191334.png]]
 
 初始化CyclicBarrier时会初始化count值和thread，并且记录count的初始值以便之后重置count；
 当其他线程调用CyclicBarrier.await()时，会count--并且调用Condition.await()阻塞线程；
