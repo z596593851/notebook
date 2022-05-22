@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "算法/题库/879.盈利计划.md",
+            "file": "算法/动态规划.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "787",
+                "query": "最后一块",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/题库/879.盈利计划.md",
+                "file": "算法/动态规划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "3c46730892bad8c5",
   "lastOpenFiles": [
-    "算法/题库/879.盈利计划.md",
     "算法/动态规划.md",
+    "算法/题库/1155.掷骰子的N种方法.md",
+    "未命名.md",
+    "算法/题库/未命名.md",
+    "算法/题库/未命名 3.md",
+    "算法/题库/未命名 2.md",
+    "算法/题库/未命名 1.md",
+    "算法/题库/879.盈利计划.md",
     "算法/题库/01背包.md",
-    "mysql/MyISAM, InnoDB.md",
-    "mysql/主从复制.md",
-    "图灵/mysql/10、Binlog、Undolog、Redolog.md",
-    "图灵/mysql/5、mysql对索引的一些优化.md",
-    "图灵/mysql/6、事务的隔离级别.md",
-    "图灵/mysql/7、锁与死锁.md",
-    "图灵/mysql/8、mysql底层结构.md"
+    "mysql/MyISAM, InnoDB.md"
   ]
 }
