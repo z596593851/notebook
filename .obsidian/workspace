@@ -1,19 +1,15 @@
 {
   "main": {
-    "id": "4853e830d20bb461",
+    "id": "9bac32d3aa6ffdc5",
     "type": "split",
     "children": [
       {
-        "id": "cca8d2499ef74c5a",
+        "id": "a6a9825413473981",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "算法/动态规划.md",
-=======
-            "file": "JDK/锁/synchronized及原理.md",
->>>>>>> refs/remotes/origin/master
+            "file": "图灵/mysql/6、事务的隔离级别.md",
             "mode": "source"
           }
         }
@@ -22,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "411f63446ba42b8a",
+    "id": "07b44287a5956036",
     "type": "split",
     "children": [
       {
-        "id": "f042d4585cdf5ad7",
+        "id": "d4be5f3ade65995d",
         "type": "tabs",
         "children": [
           {
-            "id": "1bedb12c5f4b9b3a",
+            "id": "5da201d575df6e73",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -38,16 +34,12 @@
             }
           },
           {
-            "id": "f7097a69d66a5a47",
+            "id": "a75b7b0a46a9b686",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-<<<<<<< HEAD
-                "query": "最后一块",
-=======
-                "query": "对象锁",
->>>>>>> refs/remotes/origin/master
+                "query": "Threadlo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,32 +48,27 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 258
+    "width": 300
   },
   "right": {
-    "id": "40f674dd2fb92ac4",
+    "id": "938737ede835acc4",
     "type": "split",
     "children": [
       {
-        "id": "1a7bf856dfcd7a9c",
+        "id": "611c5c44ae784232",
         "type": "tabs",
         "children": [
           {
-            "id": "6c7715510428f73e",
+            "id": "6740af28cad835d3",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "算法/动态规划.md",
-=======
-                "file": "JDK/锁/synchronized及原理.md",
->>>>>>> refs/remotes/origin/master
+                "file": "图灵/mysql/6、事务的隔离级别.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,30 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cca8d2499ef74c5a",
+  "active": "a6a9825413473981",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "算法/动态规划.md",
-    "算法/题库/1155.掷骰子的N种方法.md",
-    "未命名.md",
-    "算法/题库/未命名.md",
-    "算法/题库/未命名 3.md",
-    "算法/题库/未命名 2.md",
-    "算法/题库/未命名 1.md",
-    "算法/题库/879.盈利计划.md",
-    "算法/题库/01背包.md",
-    "mysql/MyISAM, InnoDB.md"
-=======
-    "JDK/锁/synchronized及原理.md",
-    "图灵/并发/图灵1、并发基础.md",
-    "图灵/并发/图灵2、线程基础.md",
-    "图灵/并发/图灵4、sychronized.md",
-    "图灵/jvm/4、垃圾收集算法.md",
+    "图灵/mysql/6、事务的隔离级别.md",
+    "图灵/mysql/8、mysql底层结构.md",
     "图灵/mysql/7、锁与死锁.md",
-    "JDK/多线程.md",
-    "JDK/JUC/1.线程基础.md",
-    "图灵/jvm/2、JVM内存模型.md",
-    "图灵/并发/图灵3、cas.md"
->>>>>>> refs/remotes/origin/master
+    "图灵/mysql/9、InnoDB三大特性.md",
+    "图灵/mysql/5、mysql对索引的一些优化.md",
+    "图灵/mysql/4、成本计算.md",
+    "图灵/mysql/3、优化案例.md",
+    "图灵/mysql/1、索引的数据结构.md",
+    "图灵/mysql/2、explain.md",
+    "mysql/Mysql能存储多少数据量.md"
   ]
 }
