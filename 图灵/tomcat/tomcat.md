@@ -44,3 +44,10 @@ service extends lifecycle
 ![[Pasted image 20220531232024.png]]
 ![[Pasted image 20220531232659.png]]
 ![[Pasted image 20220531232427.png]]
+
+启动
+![[Pasted image 20220601221651.png]]
+![[Pasted image 20220601221703.png]]
+![[Pasted image 20220601221742.png]]
+![[Pasted image 20220601221822.png]]
+![[Pasted image 20220601222050.png]]

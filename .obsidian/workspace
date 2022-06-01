@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/tomcat/tomcat.md",
+            "file": "图灵/tomcat/tomcat2.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/tomcat/tomcat.md",
+                "file": "图灵/tomcat/tomcat2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "cca8d2499ef74c5a",
   "lastOpenFiles": [
+    "图灵/tomcat/tomcat2.md",
+    "图灵/spring/14.springboot自动装配.md",
+    "图灵/spring/13.springmvc启动流程.md",
+    "图灵/spring/aop.md",
+    "图灵/spring/spring容器启动过程.md",
     "图灵/tomcat/tomcat.md",
     "图灵/mysql/9、InnoDB三大特性.md",
     "图灵/mysql/10、Binlog、Undolog、Redolog.md",
     "图灵/mysql/1、索引的数据结构.md",
-    "图灵/mysql/8、mysql底层结构.md",
-    "图灵/mysql/7、锁与死锁.md",
-    "图灵/mysql/6、事务的隔离级别.md",
-    "JDK/锁/synchronized及原理.md",
-    "图灵/并发/图灵1、并发基础.md",
-    "图灵/并发/图灵2、线程基础.md"
+    "图灵/mysql/8、mysql底层结构.md"
   ]
 }
