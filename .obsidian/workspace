@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/mysql/6、事务的隔离级别.md",
-            "mode": "source"
+            "file": "算法/动态规划.md",
+            "mode": "preview"
           }
         }
       }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Threadlo",
+                "query": "300.",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -48,7 +48,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -68,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/mysql/6、事务的隔离级别.md",
+                "file": "算法/动态规划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +89,15 @@
   },
   "active": "a6a9825413473981",
   "lastOpenFiles": [
-    "图灵/mysql/6、事务的隔离级别.md",
-    "图灵/mysql/8、mysql底层结构.md",
-    "图灵/mysql/7、锁与死锁.md",
-    "图灵/mysql/9、InnoDB三大特性.md",
-    "图灵/mysql/5、mysql对索引的一些优化.md",
-    "图灵/mysql/4、成本计算.md",
+    "算法/动态规划.md",
+    "算法/题库/368.最大整除子集.md",
+    "算法/题库/1155.掷骰子的N种方法.md",
+    "算法/题库/1049.最后一块石头的重量 II.md",
+    "算法/题库/576.出界的路径数.md",
+    "算法/简单但容易忘记.md",
+    "算法/题库/1713.得到子序列的最少操作次数.md",
     "图灵/mysql/3、优化案例.md",
-    "图灵/mysql/1、索引的数据结构.md",
-    "图灵/mysql/2、explain.md",
-    "mysql/Mysql能存储多少数据量.md"
+    "算法/题库/300.最长递增子序列.md",
+    "算法/贪心.md"
   ]
 }
