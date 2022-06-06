@@ -1,20 +1,16 @@
 {
   "main": {
-    "id": "4853e830d20bb461",
+    "id": "2ca250a886718b21",
     "type": "split",
     "children": [
       {
-        "id": "cca8d2499ef74c5a",
+        "id": "4947b8312e158108",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "算法/动态规划.md",
-=======
             "file": "图灵/tomcat/tomcat2.md",
->>>>>>> 001d660f0414adb280cdb9f92bb116d3097a56fc
-            "mode": "preview"
+            "mode": "source"
           }
         }
       }
@@ -22,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "411f63446ba42b8a",
+    "id": "cfb4fa862e1c4662",
     "type": "split",
     "children": [
       {
-        "id": "f042d4585cdf5ad7",
+        "id": "123a2585a0c037d0",
         "type": "tabs",
         "children": [
           {
-            "id": "1bedb12c5f4b9b3a",
+            "id": "5fca6cad486a889d",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -38,16 +34,12 @@
             }
           },
           {
-            "id": "f7097a69d66a5a47",
+            "id": "ba7333266de6efb8",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-<<<<<<< HEAD
-                "query": "300.",
-=======
-                "query": "对象锁",
->>>>>>> 001d660f0414adb280cdb9f92bb116d3097a56fc
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,32 +48,27 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 258
+    "width": 300
   },
   "right": {
-    "id": "40f674dd2fb92ac4",
+    "id": "7d2643b379f04fce",
     "type": "split",
     "children": [
       {
-        "id": "1a7bf856dfcd7a9c",
+        "id": "6a828e79562128eb",
         "type": "tabs",
         "children": [
           {
-            "id": "6c7715510428f73e",
+            "id": "d14cd00eb47ab09d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "算法/动态规划.md",
-=======
                 "file": "图灵/tomcat/tomcat2.md",
->>>>>>> 001d660f0414adb280cdb9f92bb116d3097a56fc
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,30 +86,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cca8d2499ef74c5a",
+  "active": "4947b8312e158108",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "算法/动态规划.md",
-    "算法/题库/368.最大整除子集.md",
-    "算法/题库/1155.掷骰子的N种方法.md",
-    "算法/题库/1049.最后一块石头的重量 II.md",
-    "算法/题库/576.出界的路径数.md",
-    "算法/简单但容易忘记.md",
-    "算法/题库/1713.得到子序列的最少操作次数.md",
-    "图灵/mysql/3、优化案例.md",
-    "算法/题库/300.最长递增子序列.md",
-    "算法/贪心.md"
-=======
     "图灵/tomcat/tomcat2.md",
-    "图灵/spring/14.springboot自动装配.md",
-    "图灵/spring/13.springmvc启动流程.md",
-    "图灵/spring/aop.md",
-    "图灵/spring/spring容器启动过程.md",
     "图灵/tomcat/tomcat.md",
-    "图灵/mysql/9、InnoDB三大特性.md",
-    "图灵/mysql/10、Binlog、Undolog、Redolog.md",
-    "图灵/mysql/1、索引的数据结构.md",
-    "图灵/mysql/8、mysql底层结构.md"
->>>>>>> 001d660f0414adb280cdb9f92bb116d3097a56fc
+    "图灵/tomcat/tomcat3.md"
   ]
 }
