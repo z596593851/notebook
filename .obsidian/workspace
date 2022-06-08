@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/tomcat/tomcat2.md",
+            "file": "算法/简单但容易忘记.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/tomcat/tomcat2.md",
+                "file": "算法/简单但容易忘记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,9 @@
   },
   "active": "4947b8312e158108",
   "lastOpenFiles": [
+    "算法/简单但容易忘记.md",
+    "算法/回文串问题.md",
+    "算法/题库/01背包.md",
     "图灵/tomcat/tomcat2.md",
     "图灵/tomcat/tomcat.md",
     "图灵/tomcat/tomcat3.md"
