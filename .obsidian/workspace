@@ -1,16 +1,16 @@
 {
   "main": {
-    "id": "2ca250a886718b21",
+    "id": "4853e830d20bb461",
     "type": "split",
     "children": [
       {
-        "id": "4947b8312e158108",
+        "id": "cca8d2499ef74c5a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "算法/简单但容易忘记.md",
-            "mode": "source"
+            "file": "图灵/tomcat/tomcat2.md",
+            "mode": "preview"
           }
         }
       }
@@ -18,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "cfb4fa862e1c4662",
+    "id": "411f63446ba42b8a",
     "type": "split",
     "children": [
       {
-        "id": "123a2585a0c037d0",
+        "id": "f042d4585cdf5ad7",
         "type": "tabs",
         "children": [
           {
-            "id": "5fca6cad486a889d",
+            "id": "1bedb12c5f4b9b3a",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "ba7333266de6efb8",
+            "id": "f7097a69d66a5a47",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "proac",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -52,23 +52,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 258
   },
   "right": {
-    "id": "7d2643b379f04fce",
+    "id": "40f674dd2fb92ac4",
     "type": "split",
     "children": [
       {
-        "id": "6a828e79562128eb",
+        "id": "1a7bf856dfcd7a9c",
         "type": "tabs",
         "children": [
           {
-            "id": "d14cd00eb47ab09d",
+            "id": "6c7715510428f73e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/简单但容易忘记.md",
+                "file": "图灵/tomcat/tomcat2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,24 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4947b8312e158108",
+  "active": "cca8d2499ef74c5a",
   "lastOpenFiles": [
-    "算法/简单但容易忘记.md",
-    "算法/回文串问题.md",
-    "算法/题库/01背包.md",
     "图灵/tomcat/tomcat2.md",
+    "图灵/tomcat/tomcat4.md",
+    "图灵/tomcat/tomcat3.md",
     "图灵/tomcat/tomcat.md",
-<<<<<<< HEAD
+    "图灵/jvm/1、类加载.md",
     "图灵/spring/14.springboot自动装配.md",
     "图灵/spring/13.springmvc启动流程.md",
     "图灵/spring/aop.md",
     "图灵/spring/spring容器启动过程.md",
-    "图灵/mysql/9、InnoDB三大特性.md",
-    "图灵/mysql/10、Binlog、Undolog、Redolog.md",
-    "图灵/mysql/1、索引的数据结构.md",
-    "图灵/mysql/8、mysql底层结构.md"
-=======
-    "图灵/tomcat/tomcat3.md"
->>>>>>> refs/remotes/origin/master
+    "图灵/mysql/9、InnoDB三大特性.md"
   ]
 }
