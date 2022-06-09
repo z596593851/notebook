@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "cca8d2499ef74c5a",
+        "id": "0fb3cead1db5ef08",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/tomcat/tomcat2.md",
-            "mode": "preview"
+            "file": "图灵/tomcat/2.md",
+            "mode": "source"
           }
         }
       }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258
+    "width": 226
   },
   "right": {
     "id": "40f674dd2fb92ac4",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/tomcat/tomcat2.md",
+                "file": "图灵/tomcat/2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cca8d2499ef74c5a",
+  "active": "0fb3cead1db5ef08",
   "lastOpenFiles": [
+    "图灵/tomcat/2.md",
+    "图灵/tomcat/1.md",
     "图灵/tomcat/tomcat2.md",
+    "图灵/tomcat/tomcat.md",
     "图灵/tomcat/tomcat4.md",
     "图灵/tomcat/tomcat3.md",
-    "图灵/tomcat/tomcat.md",
     "图灵/jvm/1、类加载.md",
     "图灵/spring/14.springboot自动装配.md",
     "图灵/spring/13.springmvc启动流程.md",
-    "图灵/spring/aop.md",
-    "图灵/spring/spring容器启动过程.md",
-    "图灵/mysql/9、InnoDB三大特性.md"
+    "图灵/spring/aop.md"
   ]
 }
