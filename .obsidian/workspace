@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "4947b8312e158108",
+        "id": "99eb1f7cb6b2428e",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/tomcat/tomcat2.md",
-            "mode": "preview"
+            "file": "算法/简单但容易忘记.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/tomcat/tomcat2.md",
+                "file": "算法/简单但容易忘记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,14 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4947b8312e158108",
+  "active": "99eb1f7cb6b2428e",
   "lastOpenFiles": [
+    "算法/简单但容易忘记.md",
+    "图灵/tomcat/tomcat4.md",
+    "图灵/tomcat/4.md",
     "图灵/tomcat/tomcat2.md",
     "图灵/tomcat/tomcat.md",
+    "图灵/tomcat/3.md",
+    "图灵/tomcat/2.md",
+    "图灵/tomcat/1.md",
     "图灵/tomcat/tomcat3.md",
-    "JDK/锁/synchronized及原理.md",
-    "算法/简单但容易忘记.md",
-    "算法/回文串问题.md",
-    "算法/题库/01背包.md"
+    "JDK/锁/synchronized及原理.md"
   ]
 }
