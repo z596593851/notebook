@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "算法/简单但容易忘记.md",
-            "mode": "source"
+            "file": "mysql/Mysql能存储多少数据量.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/简单但容易忘记.md",
+                "file": "mysql/Mysql能存储多少数据量.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "99eb1f7cb6b2428e",
   "lastOpenFiles": [
-    "算法/简单但容易忘记.md",
-    "图灵/tomcat/tomcat4.md",
-    "图灵/tomcat/4.md",
-    "图灵/tomcat/tomcat2.md",
-    "图灵/tomcat/tomcat.md",
-    "图灵/tomcat/3.md",
-    "图灵/tomcat/2.md",
-    "图灵/tomcat/1.md",
-    "图灵/tomcat/tomcat3.md",
-    "JDK/锁/synchronized及原理.md"
+    "mysql/Mysql能存储多少数据量.md",
+    "图灵/mysql/1、索引的数据结构.md",
+    "图灵/mysql/10、Binlog、Undolog、Redolog.md",
+    "图灵/mysql/9、InnoDB三大特性.md",
+    "图灵/mysql/8、mysql底层结构.md",
+    "图灵/mysql/7、锁与死锁.md",
+    "图灵/mysql/6、事务的隔离级别.md",
+    "图灵/mysql/5、mysql对索引的一些优化.md",
+    "图灵/mysql/4、成本计算.md",
+    "图灵/mysql/3、优化案例.md"
   ]
 }
