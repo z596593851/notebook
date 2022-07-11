@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "mysql/Mysql能存储多少数据量.md",
+            "file": "图灵/jvm/7、ZGC.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mysql/Mysql能存储多少数据量.md",
+                "file": "图灵/jvm/7、ZGC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "99eb1f7cb6b2428e",
   "lastOpenFiles": [
+    "图灵/jvm/7、ZGC.md",
     "mysql/Mysql能存储多少数据量.md",
     "图灵/mysql/1、索引的数据结构.md",
     "图灵/mysql/10、Binlog、Undolog、Redolog.md",
@@ -96,7 +97,6 @@
     "图灵/mysql/7、锁与死锁.md",
     "图灵/mysql/6、事务的隔离级别.md",
     "图灵/mysql/5、mysql对索引的一些优化.md",
-    "图灵/mysql/4、成本计算.md",
-    "图灵/mysql/3、优化案例.md"
+    "图灵/mysql/4、成本计算.md"
   ]
 }
