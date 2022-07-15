@@ -4,13 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "99eb1f7cb6b2428e",
+        "id": "8b552ec3a1c37db9",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/jvm/7、ZGC.md",
-            "mode": "preview"
+            "file": "算法/动态规划.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -52,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 231.5
   },
   "right": {
     "id": "7d2643b379f04fce",
@@ -68,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/jvm/7、ZGC.md",
+                "file": "算法/动态规划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "99eb1f7cb6b2428e",
+  "active": "8b552ec3a1c37db9",
   "lastOpenFiles": [
+    "图灵/jvm/8、JIT.md",
     "图灵/jvm/7、ZGC.md",
-    "图灵/mysql/2、explain.md",
-    "图灵/mysql/3、优化案例.md",
+    "图灵/jvm/字符串常量池.md",
+    "图灵/tomcat/2.md",
+    "图灵/tomcat/1.md",
+    "图灵/jvm/5、垃圾收集器.md",
+    "图灵/jvm/4、垃圾收集算法.md",
     "图灵/jvm/6、对象.md",
-    "mysql/Mysql能存储多少数据量.md",
-    "图灵/mysql/1、索引的数据结构.md",
-    "图灵/mysql/10、Binlog、Undolog、Redolog.md",
-    "图灵/mysql/9、InnoDB三大特性.md",
-    "图灵/mysql/8、mysql底层结构.md",
-    "图灵/mysql/7、锁与死锁.md"
+    "图灵/mysql/2、explain.md",
+    "图灵/mysql/3、优化案例.md"
   ]
 }
