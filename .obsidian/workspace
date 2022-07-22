@@ -9,9 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "算法/动态规划.md",
+            "file": "算法/简单但容易忘记2.md",
             "mode": "source",
-            "source": false
+            "source": true
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/动态规划.md",
+                "file": "算法/简单但容易忘记2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "8b552ec3a1c37db9",
   "lastOpenFiles": [
+    "算法/动态规划.md",
+    "图灵/redis/未命名.md",
+    "redis/持久化，集群.md",
+    "redis/未命名.md",
+    "redis/redis中的数据结构.md",
+    "redis/redis.md",
+    "图灵/jvm/GraalVM.md",
     "图灵/jvm/8、JIT.md",
-    "图灵/jvm/7、ZGC.md",
     "图灵/jvm/字符串常量池.md",
-    "图灵/tomcat/2.md",
-    "图灵/tomcat/1.md",
-    "图灵/jvm/5、垃圾收集器.md",
-    "图灵/jvm/4、垃圾收集算法.md",
-    "图灵/jvm/6、对象.md",
-    "图灵/mysql/2、explain.md",
-    "图灵/mysql/3、优化案例.md"
+    "图灵/jvm/7、ZGC.md"
   ]
 }
