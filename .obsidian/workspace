@@ -10,8 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "图灵/redis/分布式锁.md",
-            "mode": "source",
-            "source": true
+            "mode": "source"
           }
         }
       }
@@ -89,13 +88,13 @@
   },
   "active": "8b552ec3a1c37db9",
   "lastOpenFiles": [
-    "redis/缓存穿透，雪崩，击穿，一致性，分布式锁.md",
     "图灵/redis/分布式锁.md",
     "图灵/redis/集群.md",
+    "图灵/redis/未命名.md",
+    "redis/缓存穿透，雪崩，击穿，一致性，分布式锁.md",
     "redis/redis的数据结构.md",
     "redis/持久化，集群.md",
     "redis/redis中的数据结构.md",
-    "图灵/redis/未命名.md",
     "算法/简单但容易忘记2.md",
     "算法/动态规划.md",
     "redis/redis.md"
