@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "redis/缓存穿透，雪崩，击穿，一致性，分布式锁.md",
-            "mode": "preview",
+            "file": "图灵/redis/缓存优化.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "redis/缓存穿透，雪崩，击穿，一致性，分布式锁.md",
+                "file": "图灵/redis/缓存优化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,9 +89,9 @@
   },
   "active": "8b552ec3a1c37db9",
   "lastOpenFiles": [
-    "redis/缓存优化.md",
-    "redis/缓存穿透，雪崩，击穿，一致性，分布式锁.md",
     "图灵/redis/分布式锁.md",
+    "图灵/redis/缓存优化.md",
+    "redis/缓存穿透，雪崩，击穿，一致性，分布式锁.md",
     "图灵/redis/未命名.md",
     "图灵/redis/集群.md",
     "redis/redis的数据结构.md",
