@@ -66,6 +66,9 @@ hashtable 编码：
 # set
 intset 编码：
 ![[Pasted image 20220720210237.png]]
+intset最大存储元素个数为512，超过则转化成hashtable
+![[Pasted image 20220815194933.png]]
+intset的contents是数组，查找某个元素是否存在时用二分法效率很高
 
 hashtable 编码：
 ![[Pasted image 20220720210254.png]]
@@ -73,6 +76,7 @@ hashtable 编码：
 # zset
 ziplist编码：
 ![[Pasted image 20220720210347.png]]
+![[Pasted image 20220815195430.png]]
 
 skiplist 编码：使用 zet 结构作为底层实现，一个 zset 结构同时包含一个字典和一个跳跃表
 ```c
@@ -85,3 +89,9 @@ typedef struct zset{
 
 } zset
 ```
+
+跳表：
+![[Pasted image 20220815200440.png]]
+![[Pasted image 20220815204209.png]]
+![[Pasted image 20220815212412.png]]
+插入数据时，从最高层（level字段存储了最高层）开始找，找到合适的位置时，通过一种随机算法生成层高（生成高层的概率低，低层的概率高），在插入节点后维护好每一层的层级指针关系。
