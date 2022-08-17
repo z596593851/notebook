@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/netty.md",
-            "mode": "source",
+            "file": "图灵/jvm/2、JVM内存模型.md",
+            "mode": "preview",
             "source": true
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "直接内存",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/netty.md",
+                "file": "图灵/jvm/2、JVM内存模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8b552ec3a1c37db9",
+  "active": "5fca6cad486a889d",
   "lastOpenFiles": [
-    "计算机网络/流量控制，拥塞控制.md",
+    "图灵/tomcat/2.md",
     "图灵/netty.md",
-    "计算机网络/王道/2.OSI七层模型.md",
-    "计算机网络/王道/5.数据链路层.md",
-    "计算机网络/王道/4.物理层.md",
-    "计算机网络/王道/3.TCP IP五层模型.md",
-    "计算机网络/计算机网络.md",
-    "计算机网络/王道/1.指标.md",
-    "计算机网络/http1.0和2.0.md",
-    "图灵/redis/redis6.md"
+    "图灵/jvm/3、class文件内容.md",
+    "图灵/jvm/2、JVM内存模型.md",
+    "图灵/jvm/1、类加载.md",
+    "图灵/tomcat/3.md",
+    "图灵/tomcat/4.md",
+    "图灵/tomcat/tomcat.md",
+    "图灵/tomcat/tomcat2.md",
+    "图灵/tomcat/1.md"
   ]
 }
