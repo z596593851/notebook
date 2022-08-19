@@ -4,19 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "8b552ec3a1c37db9",
+        "id": "47a65888428acf32",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "算法/动态规划.md",
+            "file": "图灵/redis/2、redis的应用场景.md",
             "mode": "source",
-=======
-            "file": "图灵/jvm/2、JVM内存模型.md",
-            "mode": "preview",
->>>>>>> 79f7e4ba5b2194a72323d53fd21eed1a478a72a0
-            "source": true
+            "source": false
           }
         }
       }
@@ -45,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "直接内存",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,11 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "算法/动态规划.md",
-=======
-                "file": "图灵/jvm/2、JVM内存模型.md",
->>>>>>> 79f7e4ba5b2194a72323d53fd21eed1a478a72a0
+                "file": "图灵/redis/2、redis的应用场景.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,30 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "5fca6cad486a889d",
+  "active": "47a65888428acf32",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "图灵/netty.md",
-    "计算机网络/流量控制，拥塞控制.md",
-    "计算机网络/王道/2.OSI七层模型.md",
-    "计算机网络/王道/5.数据链路层.md",
-    "计算机网络/王道/4.物理层.md",
-    "计算机网络/王道/3.TCP IP五层模型.md",
-    "计算机网络/计算机网络.md",
-    "计算机网络/王道/1.指标.md",
-    "计算机网络/http1.0和2.0.md",
-    "图灵/redis/redis6.md"
-=======
-    "图灵/tomcat/2.md",
-    "图灵/netty.md",
-    "图灵/jvm/3、class文件内容.md",
-    "图灵/jvm/2、JVM内存模型.md",
-    "图灵/jvm/1、类加载.md",
-    "图灵/tomcat/3.md",
-    "图灵/tomcat/4.md",
-    "图灵/tomcat/tomcat.md",
-    "图灵/tomcat/tomcat2.md",
-    "图灵/tomcat/1.md"
->>>>>>> 79f7e4ba5b2194a72323d53fd21eed1a478a72a0
+    "图灵/redis/缓存优化.md",
+    "图灵/redis/集群.md",
+    "图灵/redis/分布式锁.md",
+    "图灵/redis/1、redis的数据结构（新）.md",
+    "图灵/redis/redis6.md",
+    "Pasted image 20220814192232.png.md",
+    "Pasted image 20220814172747.png.md",
+    "图灵/redis中的数据结构.md",
+    "图灵/并发/图灵2、线程基础.md",
+    "图灵/并发/图灵1、并发基础.md"
   ]
 }

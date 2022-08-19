@@ -1,44 +1,24 @@
 # redis的数据结构
-redis db：一共16个：
-![[Pasted image 20220811215114.png]]
-每个dict就是一个HashTable，redis里所有的k-v都通过hash算法散列后存在HashTabel中。
+![[Pasted image 20220819173953.png]]
 
-dict：即HashTable
-![[Pasted image 20220811215518.png]]
-初始容量4，扩容时x2，渐进式rehash，当数据量和数组长度为1:1时触发扩容 
+dicht就是hashTable，有两个，rehash的时候会用到第二个。
 
+dicht中的size是数组长度，初始容量4，扩容时x2，当数据量和数组长度为1:1时触发扩容。扩容时采用渐进式rehash，即为了保证可用性，在新老hashTable拷贝时不是一次性拷贝完成，而是逐步进行。在这个过程中取值时，先从旧hashTable中取，如果取不到，再从新hashTable中取。
 
-redis的五大数据结构：string、list、hash、set、zset，每种数据结构都对应一个redisObject：
-```c
-typedef struct redisObject{
-     //类型
-     unsigned type:4;
-
-     //编码
-     unsigned encoding:4;
-
-     //指向底层数据结构的指针
-     void *ptr;
-
-     //引用计数
-     int refcount;
-
-     //记录最后一次被程序访问的时间`
-     unsigned lru:22;
-}robj
-```
-type就是上述5种
+redis的五大数据结构string、list、hash、set、zset，每种数据结构都对应一个redisObject，type就是上述5种。
 
 每种数据结构都有不同的编码方式，由encoding表示：
 ![[Pasted image 20220720204837.png]]
 
-prt 指针指向对象底层的数据结构
+ptr 指针指向对象底层的数据结构。
 
 # string
-int 编码：保存的是可以用 long 类型表示的整数值
+int 编码：保存的是<2^64-1的整数，并且value会直接存在ptr里，这样ptr就不用再指向别的地方。
 
 embstr 编码：保存长度小于44字节的字符串（redis3.2版本之前是39字节，之后是44字节）
 ![[Pasted image 20220720205402.png]]
+64位系统的一个缓存行大小是64byte，一个redisObject的大小是16byte，剩下48byte可以放下sdshdr8类型的sds（sdshdr5只能放下长度是31的string，而sdshdr8能放下的string长度范围是0-255，包含48），而一个sdshdr8对象本身要占4byte，所以一个长度为44的string正好可以占用一个缓存行。embstr开辟了一个连续的内存空间，小于等于这个长度的string只需要一次cpu io就可以读出来。
+![[Pasted image 20220819162046.png]]
 
 raw 编码：保存长度大于44字节的字符串（redis3.2版本之前是39字节，之后是44字节）
 ![[Pasted image 20220720205412.png]]
@@ -50,11 +30,15 @@ sds在分配内存时会提前申请额外的空间，这样当使用append进�
 ![[Pasted image 20220803215625.png]]
 ![[Pasted image 20220803215953.png]]
 # list
-ziplist编码：
+如果list中元素较小，就会出现next、pre指针比元素大的情况（指针8byte），导致内存的浪费，这时redis会使用连续的内存空间来存放list元素，即ziplist编码：
 ![[Pasted image 20220720205756.png]]
 
 linkedlist编码
 ![[Pasted image 20220720205821.png]]
+在最新的redis中，数据量大时会使用分组的连续空间存储，不同组之间使用链表连接：
+![[Pasted image 20220819181342.png]]
+以下参数来控制分裂条件和压缩情况：
+![[Pasted image 20220819181515.png]]
 
 # hash
 ziplist编码：
@@ -63,12 +47,13 @@ ziplist编码：
 hashtable 编码：
 ![[Pasted image 20220720210032.png]]
 
+![[Pasted image 20220819180930.png]]
+
+当hash是ziplist编码时，元素是有序的；是hashtable时，是无序的。
+
 # set
 intset 编码：
 ![[Pasted image 20220720210237.png]]
-intset最大存储元素个数为512，超过则转化成hashtable
-![[Pasted image 20220815194933.png]]
-intset的contents是数组，查找某个元素是否存在时用二分法效率很高
 
 hashtable 编码：
 ![[Pasted image 20220720210254.png]]
