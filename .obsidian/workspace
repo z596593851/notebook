@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "图灵/jvm/2、JVM内存模型.md",
-            "mode": "preview",
+            "file": "go/语法.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图灵/jvm/2、JVM内存模型.md",
+                "file": "go/语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "5fca6cad486a889d",
+  "active": "8b552ec3a1c37db9",
   "lastOpenFiles": [
+    "图灵/redis/redis的数据结构.md",
+    "图灵/jvm/2、JVM内存模型.md",
     "图灵/tomcat/2.md",
     "图灵/netty.md",
     "图灵/jvm/3、class文件内容.md",
-    "图灵/jvm/2、JVM内存模型.md",
     "图灵/jvm/1、类加载.md",
     "图灵/tomcat/3.md",
     "图灵/tomcat/4.md",
     "图灵/tomcat/tomcat.md",
-    "图灵/tomcat/tomcat2.md",
-    "图灵/tomcat/1.md"
+    "图灵/tomcat/tomcat2.md"
   ]
 }
