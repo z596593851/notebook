@@ -4,20 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "47a65888428acf32",
+        "id": "8b552ec3a1c37db9",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-<<<<<<< HEAD
-            "file": "go/语法.md",
-            "mode": "source",
-            "source": true
-=======
-            "file": "算法/动态规划.md",
+            "file": "图灵/redis/6、集群.md",
             "mode": "preview",
-            "source": false
->>>>>>> refs/remotes/origin/master
+            "source": true
           }
         }
       }
@@ -46,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "treemap",
+                "query": "直接内存",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -59,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 242.0036334991455
+    "width": 176.5
   },
   "right": {
     "id": "7d2643b379f04fce",
@@ -75,11 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "go/语法.md",
-=======
-                "file": "算法/动态规划.md",
->>>>>>> refs/remotes/origin/master
+                "file": "图灵/redis/6、集群.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,32 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-<<<<<<< HEAD
   "active": "8b552ec3a1c37db9",
   "lastOpenFiles": [
-    "图灵/redis/redis的数据结构.md",
-    "图灵/jvm/2、JVM内存模型.md",
-    "图灵/tomcat/2.md",
-    "图灵/netty.md",
-    "图灵/jvm/3、class文件内容.md",
-    "图灵/jvm/1、类加载.md",
-    "图灵/tomcat/3.md",
-    "图灵/tomcat/4.md",
-    "图灵/tomcat/tomcat.md",
-    "图灵/tomcat/tomcat2.md"
-=======
-  "active": "47a65888428acf32",
-  "lastOpenFiles": [
-    "算法/递归.md",
-    "算法/TreeMap.md",
+    "redis/持久化，集群.md",
+    "图灵/redis/6、集群.md",
+    "图灵/redis/缓存优化.md",
+    "图灵/redis/5、分布式锁.md",
+    "redis/缓存穿透，雪崩，击穿，一致性，分布式锁.md",
     "图灵/redis/4、主从.md",
     "图灵/redis/2、redis的应用场景.md",
-    "图灵/redis/3、持久化.md",
-    "redis/持久化，集群.md",
-    "redis/redis中的数据结构.md",
     "图灵/redis/1、redis的数据结构（新）.md",
-    "图灵/redis/缓存优化.md",
-    "图灵/redis/集群.md"
->>>>>>> refs/remotes/origin/master
+    "图灵/redis/3、持久化.md",
+    "go/语法.md"
   ]
 }
