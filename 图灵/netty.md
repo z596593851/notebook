@@ -10,6 +10,8 @@ time_wait状态：当四次挥手时，客户端最后一次发送ack后，会�
 ![[Pasted image 20220816222842.png]]
 mysql服务器出现大量time_wait：四次挥手是客户端和服务端都可以发起的。当客户端没有主动关闭mysql连接，超出一定时间后，由于服务端一直没收到客户端的请求，会主动发起关闭请求，所以服务端会出现大量time_wait状态。
 
+所以如果mysql客户端在使用完mysql连接后没有调用con.close()，就会因为长时间没有活动导致mysql服务端主动关闭连接，并处于time_wait阶段。处于time_wait阶段的连接不会被mysql回收，在服务高峰期大量的time_wait连接容易造成连接池的枯竭，导致不能再处理新的连接请求。
+
 SYN洪泛攻击
 ![[Pasted image 20220816221718.png]]
 
