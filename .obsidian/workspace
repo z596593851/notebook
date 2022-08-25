@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "treemap",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -89,6 +90,8 @@
   },
   "active": "47a65888428acf32",
   "lastOpenFiles": [
+    "图灵/tomcat/2.md",
+    "图灵/netty.md",
     "算法/动态规划.md",
     "算法/递归.md",
     "算法/TreeMap.md",
@@ -96,8 +99,6 @@
     "图灵/redis/2、redis的应用场景.md",
     "图灵/redis/3、持久化.md",
     "redis/持久化，集群.md",
-    "redis/redis中的数据结构.md",
-    "图灵/redis/1、redis的数据结构（新）.md",
-    "图灵/redis/缓存优化.md"
+    "redis/redis中的数据结构.md"
   ]
 }
